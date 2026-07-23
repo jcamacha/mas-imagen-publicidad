@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope, JetBrains_Mono } from "next/font/google";
+import OrganicTrailWrapper from "@/components/OrganicTrailWrapper";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -53,7 +54,14 @@ export default function RootLayout({
       <body
         className={`${fraunces.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        {children}
+        {/* Layer 0: Organic animated blobs */}
+        <OrganicTrailWrapper />
+
+        {/* Layer 1: Grain texture */}
+        <div className="grain-overlay" />
+
+        {/* Layer 2: Content */}
+        <div className="relative z-[2]">{children}</div>
       </body>
     </html>
   );
