@@ -79,7 +79,7 @@ export default function Footer() {
               href="/"
               className="text-xl font-bold tracking-wider font-fraunces text-white footer-logo inline-block"
             >
-              MÁS IMAGEN PUBLICIDAD
+              MÁS IMAGEN
             </Link>
             <p className="text-sm text-gray-400 max-w-sm font-manrope">
               Del pixel a la prenda. La única agencia en el Estado de México que

@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope, Climate_Crisis } from "next/font/google";
+import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import ScrollProgress from "@/components/ScrollProgress";
-
-const climateCrisis = Climate_Crisis({
-  subsets: ["latin"],
-  variable: "--font-climate-crisis",
-  display: "swap",
-});
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -52,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="es-MX">
       <body
-        className={`${climateCrisis.variable} ${fraunces.variable} ${manrope.variable} antialiased`}
+        className={`${fraunces.variable} ${manrope.variable} antialiased`}
       >
         <ScrollProgress />
         {children}

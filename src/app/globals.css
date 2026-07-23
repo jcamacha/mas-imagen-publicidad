@@ -3,12 +3,11 @@
 @theme inline {
   --font-fraunces: "Fraunces", serif;
   --font-manrope: "Manrope", sans-serif;
-  --font-climate-crisis: "Climate Crisis", sans-serif;
   --color-accent: #2a2a2a;
   --color-accent-hover: #1a1a1a;
-  --color-accent-light: transparent;
+  --color-accent-light: #1a1a1a;
   --color-bg: #fff570;
-  --color-surface: transparent;
+  --color-surface: #1a1a1a;
   --color-border: #e8db5e;
   --color-text: #111111;
   --color-text-muted: #444444;
@@ -22,6 +21,13 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--color-bg);
+}
+
+.subrayado {
+  text-decoration: underline;
+  text-decoration-color: #e84a3d;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 
 body {
@@ -60,6 +66,29 @@ footer, footer *,
 button, input, textarea, select,
 .bg-dark-section, .bg-dark-section * {
   mix-blend-mode: normal;
+}
+
+/* Texto claro sobre fondos oscuros (accent-light, surface) */
+.bg-accent-light p,
+.bg-accent-light span,
+.bg-accent-light li,
+.bg-surface p,
+.bg-surface span,
+.bg-surface li,
+.bg-surface td,
+.bg-surface th {
+  color: #cccccc;
+}
+
+/* Headings sobre fondos oscuros: sin blend, blanco directo */
+.bg-accent-light h1,
+.bg-accent-light h2,
+.bg-accent-light h3,
+.bg-surface h1,
+.bg-surface h2,
+.bg-surface h3 {
+  mix-blend-mode: normal !important;
+  color: #ffffff !important;
 }
 
 /* Botón primario — fondo oscuro sobre amarillo */

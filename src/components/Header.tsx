@@ -41,13 +41,15 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-2xl md:text-3xl font-climate-crisis hover:opacity-85 transition-opacity"
+              className="text-2xl md:text-3xl font-fraunces font-extrabold hover:opacity-85 transition-opacity"
             >
               <motion.span
-                whileHover={{ scale: 1.03, letterSpacing: "0.05em" }}
-                className="font-extrabold tracking-wide logo-blend inline-block"
+                initial={{ color: "#ffffff" }}
+                animate={{ color: "#111111" }}
+                transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                className="font-extrabold tracking-wide inline-block"
               >
-                MÁS IMAGEN PUBLICIDAD
+                MÁS IMAGEN
               </motion.span>
             </Link>
           </div>
