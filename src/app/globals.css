@@ -3,11 +3,12 @@
 @theme inline {
   --font-fraunces: "Fraunces", serif;
   --font-manrope: "Manrope", sans-serif;
+  --font-climate-crisis: "Climate Crisis", sans-serif;
   --color-accent: #2a2a2a;
   --color-accent-hover: #1a1a1a;
-  --color-accent-light: #fff9c2;
+  --color-accent-light: transparent;
   --color-bg: #fff570;
-  --color-surface: #ffffff;
+  --color-surface: transparent;
   --color-border: #e8db5e;
   --color-text: #111111;
   --color-text-muted: #444444;
@@ -38,7 +39,13 @@ h1, h2, h3, h4, h5 {
 /* Azul/violeta en headers — mix-blend-mode: difference */
 h1, h2, h3 {
   mix-blend-mode: difference;
-  color: #ffffff;
+  color: #ffffff !important;
+}
+
+/* Hijos de headings heredan el color blanco, no hacen blend independiente */
+h1 *, h2 *, h3 * {
+  mix-blend-mode: normal;
+  color: inherit;
 }
 
 /* Logo en navbar también usa difference */

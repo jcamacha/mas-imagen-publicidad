@@ -33,7 +33,7 @@ export default function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="sticky top-0 z-50 w-full bg-bg/80 backdrop-blur-md"
+      className="sticky top-0 z-50 w-full bg-bg/85 backdrop-blur-sm"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -41,7 +41,7 @@ export default function Header() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-fraunces hover:opacity-85 transition-opacity"
+              className="text-2xl md:text-3xl font-climate-crisis hover:opacity-85 transition-opacity"
             >
               <motion.span
                 whileHover={{ scale: 1.03, letterSpacing: "0.05em" }}
