@@ -2,8 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SimpleContactForm from "@/components/SimpleContactForm";
 import HeroSlideshow from "@/components/HeroSlideshow";
-import WaveText from "@/components/WaveText";
-import LumaText from "@/components/LumaText";
+import OrganicTrail from "@/components/OrganicTrail";
 import Link from "next/link";
 
 export default function Home() {
@@ -21,12 +20,11 @@ export default function Home() {
               Taller propio · 12 años · EdoMex
             </div>
  
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces">
-              <LumaText>
-                Tu negocio, en digital y en físico.{" "}
-                En un solo lugar.
-              </LumaText>
-            </h1>
+            <OrganicTrail>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces">
+                Tu negocio, en digital y en físico. En un solo lugar.
+              </h1>
+            </OrganicTrail>
  
             <p className="text-lg md:text-xl text-text-muted leading-relaxed font-manrope max-w-xl">
               Somos la única agencia en EdoMex con taller de serigrafía propio. Hacemos tu web, tus anuncios y tus playeras. Sin complicaciones, desde hace 12 años.
