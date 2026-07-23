@@ -19,7 +19,7 @@ export default function Nosotros() {
  
         {/* Sección Historia */}
         <div className="space-y-12">
-          <div className="bg-white border border-border p-8 rounded-2xl">
+          <div className="p-8">
             <h2 className="text-2xl font-bold font-fraunces mb-4 text-text">
               Nuestra Historia
             </h2>
@@ -38,7 +38,7 @@ export default function Nosotros() {
  
           {/* Misión y Valores */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white border border-border p-8 rounded-2xl">
+            <div className="p-8">
               <h2 className="text-2xl font-bold font-fraunces mb-4 text-text">
                 Misión
               </h2>
@@ -47,7 +47,7 @@ export default function Nosotros() {
               </p>
             </div>
  
-            <div className="bg-white border border-border p-8 rounded-2xl">
+            <div className="p-8">
               <h2 className="text-2xl font-bold font-fraunces mb-4 text-text">
                 Valores
               </h2>
@@ -70,7 +70,7 @@ export default function Nosotros() {
           </div>
  
           {/* Foto Placeholder Equipo */}
-          <div className="bg-white border border-border rounded-2xl p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
+          <div className="rounded-2xl p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
             <div className="w-16 h-16 rounded-full bg-accent-light text-accent flex items-center justify-center mb-4">
               <svg
                 className="w-8 h-8"

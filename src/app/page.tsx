@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SimpleContactForm from "@/components/SimpleContactForm";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <section className="py-20 md:py-28 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="flex-1 space-y-6 text-left">
             {/* Small Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-border text-text text-xs font-semibold tracking-wider font-manrope">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#c4b840] text-text text-xs font-semibold tracking-wider font-manrope">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               Taller propio · 12 años · EdoMex
             </div>
@@ -39,15 +39,7 @@ export default function Home() {
           </div>
  
           <div className="flex-1 w-full flex justify-center items-center">
-            <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden border border-border bg-white">
-              <Image
-                src="/hero-mockup.svg"
-                alt="Mockup de celular con sitio web y playera impresa"
-                fill
-                priority
-                className="object-cover"
-              />
-            </div>
+            <HeroSlideshow />
           </div>
         </section>
 
@@ -65,7 +57,7 @@ export default function Home() {
  
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Tarjeta 1: Tu página web */}
-              <div className="bg-white border border-border p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+              <div className="p-8 flex flex-col justify-between">
                 <div>
                   <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                     <svg
@@ -100,7 +92,7 @@ export default function Home() {
               </div>
  
               {/* Tarjeta 2: Tus anuncios */}
-              <div className="bg-white border border-border p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+              <div className="p-8 flex flex-col justify-between">
                 <div>
                   <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                     <svg
@@ -135,7 +127,7 @@ export default function Home() {
               </div>
  
               {/* Tarjeta 3: Tus playeras y más */}
-              <div className="bg-white border border-border p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+              <div className="p-8 flex flex-col justify-between">
                 <div>
                   <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                     <svg
@@ -173,7 +165,7 @@ export default function Home() {
         </section>
  
         {/* SECTION 3: ¿POR QUÉ NOSOTROS? */}
-        <section className="py-20 md:py-24 px-6 bg-white border-t border-border">
+        <section className="py-20 md:py-24 px-6 border-t border-[#c4b840]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
@@ -327,7 +319,7 @@ export default function Home() {
               </p>
             </div>
  
-            <div className="bg-white border border-border p-8 rounded-2xl shadow-sm text-left">
+            <div className="p-8 text-left">
               <SimpleContactForm />
             </div>
  

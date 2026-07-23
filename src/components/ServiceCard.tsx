@@ -16,7 +16,7 @@ export default function ServiceCard({
   href,
 }: ServiceCardProps) {
   return (
-    <div className="bg-white border border-border p-8 rounded-2xl flex flex-col justify-between h-full">
+    <div className="p-8 flex flex-col justify-between h-full">
       <div>
         <div
           className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent [&>svg]:w-6 [&>svg]:h-6"

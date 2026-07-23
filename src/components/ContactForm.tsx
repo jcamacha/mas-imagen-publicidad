@@ -100,7 +100,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 bg-white border border-border p-8 rounded-2xl text-left"
+      className="space-y-6 p-8 text-left"
     >
       {/* Honeypot field */}
       <div className="hidden-field">

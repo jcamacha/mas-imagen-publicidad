@@ -98,7 +98,7 @@ export default function PackageCard({
           className={`w-full text-center block font-semibold py-3 px-6 rounded-xl transition-all duration-200 ${
             featured
               ? "btn-primary"
-              : "btn-outline bg-white"
+              : "btn-outline bg-transparent"
           }`}
         >
           Cotizar Ahora

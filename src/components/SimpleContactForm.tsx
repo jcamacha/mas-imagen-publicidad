@@ -33,7 +33,7 @@ export default function SimpleContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-white border border-border p-8 rounded-2xl text-center shadow-sm">
+      <div className="p-8 text-center shadow-sm">
         <p className="text-emerald-600 font-semibold text-lg font-manrope">
           ¡Gracias! Hemos recibido tu mensaje.
         </p>

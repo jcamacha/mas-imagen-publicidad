@@ -29,7 +29,7 @@ export default function Footer() {
                   placeholder="Tu correo electrónico"
                   className="bg-neutral-800 border border-neutral-700 rounded-l-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-accent w-full font-manrope"
                 />
-                <button className="bg-white text-text px-4 py-2 rounded-r-xl text-sm font-semibold hover:bg-neutral-100 transition-colors font-manrope cursor-pointer">
+                <button className="bg-bg text-text px-4 py-2 rounded-r-xl text-sm font-semibold hover:bg-[#e8db5e] transition-colors font-manrope cursor-pointer">
                   Unirse
                 </button>
               </div>
