@@ -23,11 +23,18 @@ html {
   background-color: var(--color-bg);
 }
 
-.subrayado {
-  text-decoration: underline;
+/* Subrayado mamey global para headings y párrafos */
+h1 u, h2 u, h3 u,
+h1[class*="underline"], h2[class*="underline"], h3[class*="underline"],
+p u, p[class*="underline"] {
   text-decoration-color: #e84a3d;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 2px;
+}
+
+/* Texto dentro de badges oscuros (bg-accent-light) siempre blanco */
+.bg-accent-light.text-accent,
+.bg-accent-light .text-accent,
+span.bg-accent-light {
+  color: #ffffff !important;
 }
 
 body {

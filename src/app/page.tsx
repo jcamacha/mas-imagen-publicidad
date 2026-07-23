@@ -23,20 +23,24 @@ export default function Home() {
       easing: "inOutSine",
     });
 
-    // 2. Stat Numbers counter on scroll intersection
+    // 2. Stat Numbers counter — vanilla JS, reliable
     const statsObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const elements = entry.target.querySelectorAll(".stat-number");
+            const elements = entry.target.querySelectorAll<HTMLElement>(".stat-number");
             elements.forEach((el) => {
-              const targetVal = parseInt(el.getAttribute("data-target") || "0", 10);
-              animate(el, {
-                innerText: [0, targetVal],
-                duration: 1500,
-                round: 1,
-                easing: "outExpo",
-              });
+              const target = parseInt(el.getAttribute("data-target") || "0", 10);
+              const duration = 1500;
+              const start = performance.now();
+              function tick(now: number) {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+                el.textContent = String(Math.round(eased * target));
+                if (progress < 1) requestAnimationFrame(tick);
+              }
+              requestAnimationFrame(tick);
             });
             statsObserver.unobserve(entry.target);
           }
@@ -152,7 +156,7 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
                 Lo que hacemos por tu negocio
               </h2>
-              <p className="text-text-muted font-manrope text-base max-w-xl mx-auto">
+              <p className="text-text-muted font-manrope text-base max-w-xl mx-auto subrayado">
                 Soluciones integrales de marketing y producción física directa, controladas por nosotros de inicio a fin.
               </p>
             </div>
