@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SimpleContactForm from "@/components/SimpleContactForm";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import WaveText from "@/components/WaveText";
 import Link from "next/link";
 
 export default function Home() {
@@ -19,9 +20,11 @@ export default function Home() {
               Taller propio · 12 años · EdoMex
             </div>
  
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces text-text">
-              Tu negocio, en digital y en físico.{" "}
-              <span>En un solo lugar.</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces">
+              <WaveText>
+                Tu negocio, en digital y en físico.{" "}
+                En un solo lugar.
+              </WaveText>
             </h1>
  
             <p className="text-lg md:text-xl text-text-muted leading-relaxed font-manrope max-w-xl">
