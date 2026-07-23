@@ -45,9 +45,10 @@ export default function Header() {
             >
               <motion.span
                 initial={{ color: "#ffffff" }}
-                animate={{ color: "#111111" }}
-                transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                className="font-extrabold tracking-wide inline-block"
+                animate={{ color: "#ffffff" }}
+                whileHover={{ color: "#111111" }}
+                transition={{ duration: 0.3 }}
+                className="font-extrabold tracking-wide inline-block logo-blend"
               >
                 MÁS IMAGEN
               </motion.span>

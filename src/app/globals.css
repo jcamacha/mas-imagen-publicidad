@@ -72,12 +72,23 @@ button, input, textarea, select,
 .bg-accent-light p,
 .bg-accent-light span,
 .bg-accent-light li,
+.bg-accent-light div,
 .bg-surface p,
 .bg-surface span,
 .bg-surface li,
 .bg-surface td,
-.bg-surface th {
+.bg-surface th,
+.bg-surface div {
   color: #cccccc;
+}
+
+/* Iconos y elementos text-text dentro de fondos oscuros */
+.bg-accent-light .text-text,
+.bg-accent-light svg,
+.bg-surface .text-text,
+.bg-surface svg {
+  color: #ffffff;
+  stroke: #ffffff;
 }
 
 /* Headings sobre fondos oscuros: sin blend, blanco directo */
@@ -89,6 +100,17 @@ button, input, textarea, select,
 .bg-surface h3 {
   mix-blend-mode: normal !important;
   color: #ffffff !important;
+}
+
+/* Excepciones para StepCounter — siempre visible */
+.step-1-text h3,
+.step-2-text h3,
+.step-3-text h3,
+.step-1-num,
+.step-2-num,
+.step-3-num {
+  mix-blend-mode: normal !important;
+  color: #111111 !important;
 }
 
 /* Botón primario — fondo oscuro sobre amarillo */
