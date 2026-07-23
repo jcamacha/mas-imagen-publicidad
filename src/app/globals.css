@@ -89,7 +89,7 @@ section {
 h1, h2, h3, h4, h5, h6, p, span, li, label, a {
   mix-blend-mode: difference;
   color: #ffffff;
-  filter: saturate(0) contrast(999);
+  filter: url("#bnw-filter");
 }
 
 /* Exceptions — never blend */
