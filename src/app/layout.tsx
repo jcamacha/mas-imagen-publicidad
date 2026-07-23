@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -53,8 +54,10 @@ export default function RootLayout({
       <body
         className={`${fraunces.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <ScrollProgress />
         {children}
       </body>
     </html>
   );
 }
+

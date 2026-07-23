@@ -83,7 +83,7 @@ export default function Servicios() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
+            <div className="p-6 rounded-xl transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -110,7 +110,7 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
+            <div className="p-6 rounded-xl transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -136,7 +136,7 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
+            <div className="p-6 rounded-xl transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -162,7 +162,7 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
+            <div className="p-6 rounded-xl transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -207,7 +207,7 @@ export default function Servicios() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+            <div className="p-6 rounded-xl/60 transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -233,7 +233,7 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+            <div className="p-6 rounded-xl/60 transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -259,7 +259,7 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+            <div className="p-6 rounded-xl/60 transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -285,7 +285,7 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+            <div className="p-6 rounded-xl/60 transition-colors">
               <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
@@ -434,7 +434,7 @@ export default function Servicios() {
           </h2>
 
           <div className="space-y-4">
-            <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
+            <details className="group rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Tienen mínimos de compra en el taller de serigrafía?
                 <span className="transition group-open:rotate-180 text-accent">
@@ -461,7 +461,7 @@ export default function Servicios() {
               </p>
             </details>
 
-            <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
+            <details className="group rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Cómo funciona la facturación de campañas digitales y uniformes?
                 <span className="transition group-open:rotate-180 text-accent">
@@ -489,7 +489,7 @@ export default function Servicios() {
               </p>
             </details>
 
-            <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
+            <details className="group rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Cuánto tiempo tardan en entregar un sitio web y el paquete físico?
                 <span className="transition group-open:rotate-180 text-accent">
@@ -518,7 +518,7 @@ export default function Servicios() {
               </p>
             </details>
 
-            <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
+            <details className="group rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Ustedes administran el presupuesto de anuncios de Google y Meta?
                 <span className="transition group-open:rotate-180 text-accent">
@@ -546,7 +546,7 @@ export default function Servicios() {
               </p>
             </details>
 
-            <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
+            <details className="group rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Dónde se encuentra su taller físico de serigrafía?
                 <span className="transition group-open:rotate-180 text-accent">

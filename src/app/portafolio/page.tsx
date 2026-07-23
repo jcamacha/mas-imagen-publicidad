@@ -76,7 +76,7 @@ export default function Portafolio() {
           {PROJECTS.map((project, idx) => (
             <div
               key={idx}
-              className="bg-surface border border-border rounded-2xl overflow-hidden hover:border-accent/60 transition-all duration-300 flex flex-col justify-between group h-full"
+              className="rounded-2xl overflow-hidden hover:border-accent/60 transition-all duration-300 flex flex-col justify-between group h-full"
             >
               {/* Imagen Placeholder */}
               <div className="relative h-48 w-full border-b border-border overflow-hidden bg-accent-light">

@@ -1,9 +1,9 @@
 "use client";
- 
+
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -19,21 +19,21 @@ const itemVariants = {
   hidden: { y: -20, opacity: 0 },
   visible: { y: 0, opacity: 1, transition: { duration: 0.3 } },
 };
- 
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
- 
+
   const toggleMenu = () => setIsOpen(!isOpen);
- 
+
   const isActive = (path: string) => pathname === path;
- 
+
   return (
     <motion.header
-      initial={{ y: -80, opacity: 0 }}
+      initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="sticky top-0 z-50 w-full bg-transparent"
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      className="sticky top-0 z-50 w-full bg-bg/80 backdrop-blur-md"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -43,10 +43,15 @@ export default function Header() {
               href="/"
               className="text-xl md:text-2xl font-fraunces hover:opacity-85 transition-opacity"
             >
-              <span className="font-extrabold tracking-wide logo-blend">MÁS IMAGEN PUBLICIDAD</span>
+              <motion.span
+                whileHover={{ scale: 1.03, letterSpacing: "0.05em" }}
+                className="font-extrabold tracking-wide logo-blend inline-block"
+              >
+                MÁS IMAGEN PUBLICIDAD
+              </motion.span>
             </Link>
           </div>
- 
+
           {/* Desktop Nav */}
           <motion.nav
             variants={containerVariants}
@@ -54,59 +59,40 @@ export default function Header() {
             animate="visible"
             className="hidden md:flex items-center space-x-8"
           >
-            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
-              <Link
-                href="/"
-                className={`text-sm font-manrope pb-1 transition-all ${
-                  isActive("/") 
-                    ? "font-bold text-text border-b-2 border-accent" 
-                    : "font-semibold text-text-muted hover:text-text"
-                }`}
+            {[
+              { href: "/", label: "Inicio" },
+              { href: "/servicios", label: "Servicios" },
+              { href: "/nosotros", label: "Nosotros" },
+              { href: "/contacto", label: "Contacto" },
+            ].map((link) => (
+              <motion.div
+                key={link.href}
+                variants={itemVariants}
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 400 }}
+                className="relative py-2"
               >
-                Inicio
-              </Link>
-            </motion.div>
- 
-            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
-              <Link
-                href="/servicios"
-                className={`text-sm font-manrope pb-1 transition-all ${
-                  isActive("/servicios") 
-                    ? "font-bold text-text border-b-2 border-accent" 
-                    : "font-semibold text-text-muted hover:text-text"
-                }`}
-              >
-                Servicios
-              </Link>
-            </motion.div>
- 
-            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
-              <Link
-                href="/nosotros"
-                className={`text-sm font-manrope pb-1 transition-all ${
-                  isActive("/nosotros") 
-                    ? "font-bold text-text border-b-2 border-accent" 
-                    : "font-semibold text-text-muted hover:text-text"
-                }`}
-              >
-                Nosotros
-              </Link>
-            </motion.div>
- 
-            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
-              <Link
-                href="/contacto"
-                className={`text-sm font-manrope pb-1 transition-all ${
-                  isActive("/contacto") 
-                    ? "font-bold text-text border-b-2 border-accent" 
-                    : "font-semibold text-text-muted hover:text-text"
-                }`}
-              >
-                Contacto
-              </Link>
-            </motion.div>
+                <Link
+                  href={link.href}
+                  className={`text-sm font-manrope pb-1 transition-colors ${
+                    isActive(link.href)
+                      ? "font-bold text-text"
+                      : "font-semibold text-text-muted hover:text-text"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+                {isActive(link.href) && (
+                  <motion.span
+                    layoutId="active-nav"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </motion.div>
+            ))}
           </motion.nav>
- 
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -150,59 +136,40 @@ export default function Header() {
           </div>
         </div>
       </div>
- 
+
       {/* Mobile Menu */}
-      {isOpen && (
-        <div
-          className="md:hidden bg-bg py-4 px-4 space-y-3"
-          id="mobile-menu"
-        >
-          <Link
-            href="/"
-            className={`block px-3 py-2 text-base font-manrope ${
-              isActive("/")
-                ? "font-bold text-text border-b-2 border-accent w-fit"
-                : "font-semibold text-text-muted hover:text-text"
-            }`}
-            onClick={() => setIsOpen(false)}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden bg-bg py-4 px-4 space-y-3 overflow-hidden"
+            id="mobile-menu"
           >
-            Inicio
-          </Link>
-          <Link
-            href="/servicios"
-            className={`block px-3 py-2 text-base font-manrope ${
-              isActive("/servicios")
-                ? "font-bold text-text border-b-2 border-accent w-fit"
-                : "font-semibold text-text-muted hover:text-text"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            Servicios
-          </Link>
-          <Link
-            href="/nosotros"
-            className={`block px-3 py-2 text-base font-manrope ${
-              isActive("/nosotros")
-                ? "font-bold text-text border-b-2 border-accent w-fit"
-                : "font-semibold text-text-muted hover:text-text"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            Nosotros
-          </Link>
-          <Link
-            href="/contacto"
-            className={`block px-3 py-2 text-base font-manrope ${
-              isActive("/contacto")
-                ? "font-bold text-text border-b-2 border-accent w-fit"
-                : "font-semibold text-text-muted hover:text-text"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            Contacto
-          </Link>
-        </div>
-      )}
+            {[
+              { href: "/", label: "Inicio" },
+              { href: "/servicios", label: "Servicios" },
+              { href: "/nosotros", label: "Nosotros" },
+              { href: "/contacto", label: "Contacto" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block px-3 py-2 text-base font-manrope ${
+                  isActive(link.href)
+                    ? "font-bold text-text border-b-2 border-accent w-fit"
+                    : "font-semibold text-text-muted hover:text-text"
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

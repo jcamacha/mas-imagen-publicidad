@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { animate, stagger } from "animejs";
- 
+
 export default function Footer() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -12,13 +12,31 @@ export default function Footer() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // Columns stagger fade-in from below
             animate(".footer-col", {
-              translateY: [30, 0],
+              translateY: [40, 0],
               opacity: [0, 1],
               delay: stagger(100),
-              ease: "outExpo",
+              easing: "outExpo",
               duration: 800,
             });
+
+            // Logo scale and opacity
+            animate(".footer-logo", {
+              scale: [0.8, 1],
+              opacity: [0, 1],
+              duration: 800,
+              easing: "outBack",
+            });
+
+            // Newsletter input width expansion
+            animate(".footer-input", {
+              width: ["0%", "100%"],
+              duration: 600,
+              delay: 800,
+              easing: "outQuad",
+            });
+
             observer.unobserve(entry.target);
           }
         });
@@ -35,6 +53,22 @@ export default function Footer() {
     };
   }, []);
 
+  const handleLinkMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    animate(e.currentTarget, {
+      translateX: 5,
+      duration: 200,
+      easing: "outQuad",
+    });
+  };
+
+  const handleLinkMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    animate(e.currentTarget, {
+      translateX: 0,
+      duration: 200,
+      easing: "outQuad",
+    });
+  };
+
   return (
     <footer className="bg-dark-section text-white border-t border-neutral-800 mt-20">
       <div ref={containerRef} className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -43,7 +77,7 @@ export default function Footer() {
           <div className="md:col-span-2 space-y-6 footer-col opacity-0">
             <Link
               href="/"
-              className="text-xl font-bold tracking-wider font-fraunces text-white"
+              className="text-xl font-bold tracking-wider font-fraunces text-white footer-logo inline-block"
             >
               MÁS IMAGEN PUBLICIDAD
             </Link>
@@ -52,24 +86,27 @@ export default function Footer() {
               integra marketing digital estratégico con taller de serigrafía y
               producción física propia.
             </p>
-            {/* Newsletter Placeholder */}
+            {/* Newsletter */}
             <div className="space-y-3">
               <h4 className="text-sm font-semibold text-white uppercase tracking-wider font-mono">
                 Suscríbete a nuestro boletín
               </h4>
-              <div className="flex max-w-sm">
-                <input
-                  type="email"
-                  placeholder="Tu correo electrónico"
-                  className="bg-neutral-800 border border-neutral-700 rounded-l-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-accent w-full font-manrope"
-                />
-                <button className="bg-bg text-text px-4 py-2 rounded-r-xl text-sm font-semibold hover:bg-[#e8db5e] transition-colors font-manrope cursor-pointer">
+              <div className="flex max-w-sm w-full">
+                <div className="flex-grow overflow-hidden">
+                  <input
+                    type="email"
+                    placeholder="Tu correo electrónico"
+                    style={{ width: "0%" }}
+                    className="footer-input bg-neutral-800 border border-neutral-700 rounded-l-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-accent font-manrope block"
+                  />
+                </div>
+                <button className="bg-bg text-text px-4 py-2 rounded-r-xl text-sm font-semibold hover:bg-[#e8db5e] transition-colors font-manrope cursor-pointer flex-shrink-0">
                   Unirse
                 </button>
               </div>
             </div>
           </div>
- 
+
           {/* Columna Servicios */}
           <div className="footer-col opacity-0">
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
@@ -79,7 +116,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios#digital"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  onMouseEnter={handleLinkMouseEnter}
+                  onMouseLeave={handleLinkMouseLeave}
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope inline-block"
                 >
                   Presencia Digital
                 </Link>
@@ -87,7 +126,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios#fisico"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  onMouseEnter={handleLinkMouseEnter}
+                  onMouseLeave={handleLinkMouseLeave}
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope inline-block"
                 >
                   Presencia Física
                 </Link>
@@ -95,7 +136,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  onMouseEnter={handleLinkMouseEnter}
+                  onMouseLeave={handleLinkMouseLeave}
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope inline-block"
                 >
                   Taller de Serigrafía
                 </Link>
@@ -103,14 +146,16 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  onMouseEnter={handleLinkMouseEnter}
+                  onMouseLeave={handleLinkMouseLeave}
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope inline-block"
                 >
                   Planes Integrados
                 </Link>
               </li>
             </ul>
           </div>
- 
+
           {/* Columna Empresa & Contacto */}
           <div className="footer-col opacity-0">
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
@@ -120,7 +165,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/nosotros"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  onMouseEnter={handleLinkMouseEnter}
+                  onMouseLeave={handleLinkMouseLeave}
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope inline-block"
                 >
                   Nosotros
                 </Link>
@@ -128,7 +175,9 @@ export default function Footer() {
               <li>
                 <Link
                   href="/portafolio"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  onMouseEnter={handleLinkMouseEnter}
+                  onMouseLeave={handleLinkMouseLeave}
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope inline-block"
                 >
                   Portafolio
                 </Link>
@@ -136,13 +185,15 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contacto"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  onMouseEnter={handleLinkMouseEnter}
+                  onMouseLeave={handleLinkMouseLeave}
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope inline-block"
                 >
                   Contacto
                 </Link>
               </li>
             </ul>
- 
+
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
               Redes Sociales
             </h3>
@@ -182,7 +233,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
- 
+
         {/* Barra inferior de copyright */}
         <div className="border-t border-neutral-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-gray-500 font-manrope">

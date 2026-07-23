@@ -30,7 +30,7 @@ export default function Contacto() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Información de Contacto */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="bg-surface border border-border p-8 rounded-2xl space-y-6">
+            <div className="p-8 rounded-2xl space-y-6">
               <h2 className="text-2xl font-bold font-fraunces text-text">
                 Datos de Contacto
               </h2>

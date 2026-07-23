@@ -133,8 +133,8 @@ export default function SimpleContactForm() {
  
       <motion.button
         variants={inputVariants}
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scale: 0.97 }}
+        whileHover={{ scale: 1.03, boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}
+        whileTap={{ scale: 0.96 }}
         type="submit"
         disabled={status === "loading"}
         className="w-full btn-primary py-4 text-center cursor-pointer font-bold rounded-xl transition-all disabled:opacity-50"

@@ -17,7 +17,7 @@ export default function PackageCard({
 }: PackageCardProps) {
   return (
     <div
-      className={`relative flex flex-col justify-between rounded-2xl p-8 bg-surface border transition-all duration-300 ${
+      className={`relative flex flex-col justify-between rounded-2xl p-8 border transition-all duration-300 ${
         featured
           ? "border-2 border-accent lg:scale-105 z-10"
           : "border-border hover:border-accent"
