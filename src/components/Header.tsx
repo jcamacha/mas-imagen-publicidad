@@ -3,6 +3,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: -20, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.3 } },
+};
  
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +29,12 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
  
   return (
-    <header className="sticky top-0 z-50 w-full bg-transparent">
+    <motion.header
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="sticky top-0 z-50 w-full bg-transparent"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -27,51 +48,64 @@ export default function Header() {
           </div>
  
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/"
-              className={`text-sm font-manrope pb-1 transition-all ${
-                isActive("/") 
-                  ? "font-bold text-text border-b-2 border-accent" 
-                  : "font-semibold text-text-muted hover:text-text"
-              }`}
-            >
-              Inicio
-            </Link>
+          <motion.nav
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="hidden md:flex items-center space-x-8"
+          >
+            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
+              <Link
+                href="/"
+                className={`text-sm font-manrope pb-1 transition-all ${
+                  isActive("/") 
+                    ? "font-bold text-text border-b-2 border-accent" 
+                    : "font-semibold text-text-muted hover:text-text"
+                }`}
+              >
+                Inicio
+              </Link>
+            </motion.div>
  
-            <Link
-              href="/servicios"
-              className={`text-sm font-manrope pb-1 transition-all ${
-                isActive("/servicios") 
-                  ? "font-bold text-text border-b-2 border-accent" 
-                  : "font-semibold text-text-muted hover:text-text"
-              }`}
-            >
-              Servicios
-            </Link>
+            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
+              <Link
+                href="/servicios"
+                className={`text-sm font-manrope pb-1 transition-all ${
+                  isActive("/servicios") 
+                    ? "font-bold text-text border-b-2 border-accent" 
+                    : "font-semibold text-text-muted hover:text-text"
+                }`}
+              >
+                Servicios
+              </Link>
+            </motion.div>
  
-            <Link
-              href="/nosotros"
-              className={`text-sm font-manrope pb-1 transition-all ${
-                isActive("/nosotros") 
-                  ? "font-bold text-text border-b-2 border-accent" 
-                  : "font-semibold text-text-muted hover:text-text"
-              }`}
-            >
-              Nosotros
-            </Link>
+            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
+              <Link
+                href="/nosotros"
+                className={`text-sm font-manrope pb-1 transition-all ${
+                  isActive("/nosotros") 
+                    ? "font-bold text-text border-b-2 border-accent" 
+                    : "font-semibold text-text-muted hover:text-text"
+                }`}
+              >
+                Nosotros
+              </Link>
+            </motion.div>
  
-            <Link
-              href="/contacto"
-              className={`text-sm font-manrope pb-1 transition-all ${
-                isActive("/contacto") 
-                  ? "font-bold text-text border-b-2 border-accent" 
-                  : "font-semibold text-text-muted hover:text-text"
-              }`}
-            >
-              Contacto
-            </Link>
-          </nav>
+            <motion.div variants={itemVariants} whileHover={{ x: 3 }}>
+              <Link
+                href="/contacto"
+                className={`text-sm font-manrope pb-1 transition-all ${
+                  isActive("/contacto") 
+                    ? "font-bold text-text border-b-2 border-accent" 
+                    : "font-semibold text-text-muted hover:text-text"
+                }`}
+              >
+                Contacto
+              </Link>
+            </motion.div>
+          </motion.nav>
  
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -169,6 +203,6 @@ export default function Header() {
           </Link>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }

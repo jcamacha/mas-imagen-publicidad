@@ -1,12 +1,46 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { animate, stagger } from "animejs";
  
 export default function Footer() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animate(".footer-col", {
+              translateY: [30, 0],
+              opacity: [0, 1],
+              delay: stagger(100),
+              ease: "outExpo",
+              duration: 800,
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <footer className="bg-dark-section text-white border-t border-neutral-800 mt-20">
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Columna Marca & Newsletter */}
-          <div className="md:col-span-2 space-y-6">
+          <div className="md:col-span-2 space-y-6 footer-col opacity-0">
             <Link
               href="/"
               className="text-xl font-bold tracking-wider font-fraunces text-white"
@@ -37,7 +71,7 @@ export default function Footer() {
           </div>
  
           {/* Columna Servicios */}
-          <div>
+          <div className="footer-col opacity-0">
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
               Servicios
             </h3>
@@ -78,7 +112,7 @@ export default function Footer() {
           </div>
  
           {/* Columna Empresa & Contacto */}
-          <div>
+          <div className="footer-col opacity-0">
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
               Empresa
             </h3>

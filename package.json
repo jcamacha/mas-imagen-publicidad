@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "animejs": "^4.5.0",
     "framer-motion": "^12.42.2",
     "next": "16.2.11",
     "pixi.js": "^8.19.0",
