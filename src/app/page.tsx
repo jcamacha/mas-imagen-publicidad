@@ -24,7 +24,7 @@ export default function Home() {
               <span>En un solo lugar.</span>
             </h1>
  
-            <p className="text-lg md:text-xl leading-relaxed font-manrope max-w-xl">
+            <p className="text-lg md:text-xl text-text-muted leading-relaxed font-manrope max-w-xl">
               Somos la única agencia en EdoMex con taller de serigrafía propio. Hacemos tu web, tus anuncios y tus playeras. Sin complicaciones, desde hace 12 años.
             </p>
  
@@ -47,10 +47,10 @@ export default function Home() {
         <section className="py-20 md:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
                 Lo que hacemos por tu negocio
               </h2>
-              <p className="font-manrope text-base max-w-xl mx-auto">
+              <p className="text-text-muted font-manrope text-base max-w-xl mx-auto">
                 Soluciones integrales de marketing y producción física directa, controladas por nosotros de inicio a fin.
               </p>
             </div>
@@ -74,15 +74,15 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                     Tu página web
                   </h3>
-                  <p className="text-sm leading-relaxed mb-6 font-manrope">
+                  <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
                     Diseño profesional y a la medida de tu negocio. Optimizado para buscadores, de carga rápida y adaptado a móviles.
                   </p>
                   <ul className="space-y-2">
                     {["Diseño profesional a medida", "Optimización SEO", "Velocidad de carga rápida", "Totalmente responsivo"].map((bullet, index) => (
-                      <li key={index} className="flex items-center gap-2 text-xs font-manrope">
+                      <li key={index} className="flex items-center gap-2 text-xs text-text font-manrope">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                         {bullet}
                       </li>
@@ -109,15 +109,15 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                     Tus anuncios
                   </h3>
-                  <p className="text-sm leading-relaxed mb-6 font-manrope">
+                  <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
                     Llega a los clientes ideales para tu negocio. Gestionamos tus campañas en Google Ads, Facebook e Instagram.
                   </p>
                   <ul className="space-y-2">
                     {["Campañas en Google Search", "Anuncios en Facebook e Instagram", "Seguimiento de llamadas y leads", "Optimización de presupuesto"].map((bullet, index) => (
-                      <li key={index} className="flex items-center gap-2 text-xs font-manrope">
+                      <li key={index} className="flex items-center gap-2 text-xs text-text font-manrope">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                         {bullet}
                       </li>
@@ -144,15 +144,15 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                     Tus playeras y más
                   </h3>
-                  <p className="text-sm leading-relaxed mb-6 font-manrope">
+                  <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
                     Uniformes profesionales y artículos promocionales para tu marca. Calidad directa de nuestro taller de serigrafía.
                   </p>
                   <ul className="space-y-2">
                     {["Estampado textil en serigrafía", "Polos bordadas para uniformes", "Tazas y artículos de merch", "Letreros y lonas exteriores"].map((bullet, index) => (
-                      <li key={index} className="flex items-center gap-2 text-xs font-manrope">
+                      <li key={index} className="flex items-center gap-2 text-xs text-text font-manrope">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                         {bullet}
                       </li>
@@ -168,7 +168,7 @@ export default function Home() {
         <section className="py-20 md:py-24 px-6 border-t border-[#c4b840]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
                 Mucho más que una agencia de marketing
               </h2>
             </div>
@@ -191,10 +191,10 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-fraunces mb-3">
+                <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                   Taller propio
                 </h3>
-                <p className="text-sm leading-relaxed font-manrope">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope">
                   Desde hace 12 años producimos playeras, uniformes, tazas y displays en nuestro taller de serigrafía. No subcontratamos: controlamos calidad, tiempos y precio.
                 </p>
               </div>
@@ -216,10 +216,10 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-fraunces mb-3">
+                <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                   Digital + físico
                 </h3>
-                <p className="text-sm leading-relaxed font-manrope">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope">
                   Nadie más te ofrece la página web, los anuncios Y las playeras en un solo lugar. Una factura, un equipo, cero dolores de cabeza.
                 </p>
               </div>
@@ -241,10 +241,10 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-fraunces mb-3">
+                <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                   Resultados que se miden
                 </h3>
-                <p className="text-sm leading-relaxed font-manrope">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope">
                   No hacemos humo. Cada campaña tiene métricas claras: visitas, leads, ventas. Te reportamos resultados, no excusas.
                 </p>
               </div>
@@ -256,10 +256,10 @@ export default function Home() {
         <section className="py-20 md:py-24 px-6 border-t border-border">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
                 Así de fácil es trabajar con nosotros
               </h2>
-              <p className="font-manrope text-base max-w-xl mx-auto">
+              <p className="text-text-muted font-manrope text-base max-w-xl mx-auto">
                 Sin intermediarios ni problemas de comunicación. Nos encargamos de todo el proceso.
               </p>
             </div>
@@ -267,39 +267,39 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
               {/* Paso 1 */}
               <div className="text-center space-y-4">
-                <span className="block text-6xl font-bold font-fraunces tracking-tight">
+                <div className="text-6xl font-bold font-fraunces text-text tracking-tight">
                   1
-                </span>
-                <h3 className="text-xl font-bold font-fraunces">
+                </div>
+                <h3 className="text-xl font-bold font-fraunces text-text">
                   Platicamos
                 </h3>
-                <p className="text-sm leading-relaxed font-manrope max-w-xs mx-auto">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope max-w-xs mx-auto">
                   Entendemos tu negocio, tu mercado y tus objetivos para diseñar una estrategia integral a tu medida.
                 </p>
               </div>
  
               {/* Paso 2 */}
               <div className="text-center space-y-4">
-                <span className="block text-6xl font-bold font-fraunces tracking-tight">
+                <div className="text-6xl font-bold font-fraunces text-text tracking-tight">
                   2
-                </span>
-                <h3 className="text-xl font-bold font-fraunces">
+                </div>
+                <h3 className="text-xl font-bold font-fraunces text-text">
                   Creamos
                 </h3>
-                <p className="text-sm leading-relaxed font-manrope max-w-xs mx-auto">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope max-w-xs mx-auto">
                   Desarrollamos tu sitio web, programamos tus campañas y producimos las prendas físicas en nuestro taller.
                 </p>
               </div>
  
               {/* Paso 3 */}
               <div className="text-center space-y-4">
-                <span className="block text-6xl font-bold font-fraunces tracking-tight">
+                <div className="text-6xl font-bold font-fraunces text-text tracking-tight">
                   3
-                </span>
-                <h3 className="text-xl font-bold font-fraunces">
+                </div>
+                <h3 className="text-xl font-bold font-fraunces text-text">
                   Creces
                 </h3>
-                <p className="text-sm leading-relaxed font-manrope max-w-xs mx-auto">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope max-w-xs mx-auto">
                   Lanzamos las campañas, medimos los resultados de visitas y cotizaciones, y realizamos los ajustes necesarios.
                 </p>
               </div>
