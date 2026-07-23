@@ -26,11 +26,11 @@ function createBlob(w: number, h: number): Blob {
     speedY: 0.0003 + Math.random() * 0.0007,
     ampX: 0.3 + Math.random() * 0.4,
     ampY: 0.3 + Math.random() * 0.4,
-    opacity: 0.12 + Math.random() * 0.18,
+    opacity: 0.25 + Math.random() * 0.25,
   };
 }
 
-const BLOB_COUNT = 4;
+const BLOB_COUNT = 5;
 
 export default function OrganicTrail() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -113,7 +113,7 @@ export default function OrganicTrail() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full block"
+      className="fixed inset-0 w-full h-full block z-0"
       style={{ pointerEvents: "none" }}
       aria-hidden="true"
     />
