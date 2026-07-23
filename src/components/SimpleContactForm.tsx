@@ -97,7 +97,7 @@ export default function SimpleContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full btn-primary py-4 text-center text-white cursor-pointer font-bold rounded-xl transition-all disabled:opacity-50"
+        className="w-full btn-primary py-4 text-center cursor-pointer font-bold rounded-xl transition-all disabled:opacity-50"
       >
         {status === "loading" ? "Enviando..." : "Cuéntanos tu proyecto"}
       </button>

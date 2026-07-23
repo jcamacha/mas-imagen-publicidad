@@ -24,7 +24,7 @@ export default function PackageCard({
       }`}
     >
       {featured && (
-        <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-white bg-accent rounded-full shadow-sm">
+        <span className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-[#ffffff] bg-accent rounded-full shadow-sm">
           Más popular
         </span>
       )}
@@ -66,14 +66,14 @@ export default function PackageCard({
  
         {/* Productos Físicos */}
         <div>
-          <h4 className="text-xs font-bold uppercase tracking-wider text-[#c2593f] mb-3 font-mono">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-accent mb-3 font-mono">
             Productos Físicos
           </h4>
           <ul className="space-y-2.5">
             {products.map((product, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm text-text-muted">
                 <svg
-                  className="w-5 h-5 text-[#c2593f] shrink-0 mt-0.5"
+                  className="w-5 h-5 text-accent shrink-0 mt-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

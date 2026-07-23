@@ -10,13 +10,17 @@ export default function Servicios() {
 
       <main className="flex-grow py-20 px-6 max-w-6xl mx-auto w-full">
         {/* H1 Animado */}
-        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 font-fraunces text-center">
-          Nuestros <span className="gradient-text">Servicios</span>
+        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center">
+          Nuestros <span className="text-accent">Servicios</span>
         </AnimatedTitle>
 
-        <p className="text-text-muted text-center font-manrope text-lg mb-12 max-w-2xl mx-auto">
+        <p className="text-text-muted text-center font-manrope text-lg mb-4 max-w-2xl mx-auto">
           Explora soluciones integrales diseñadas para hacer crecer tu marca.
           Navega entre nuestros dos grandes pilares.
+        </p>
+
+        <p className="text-accent text-center font-manrope text-base font-semibold mb-12 max-w-2xl mx-auto bg-accent-light px-4 py-2.5 rounded-xl border border-accent/20">
+          Todos nuestros servicios digitales pueden combinarse con producción física. Tú decides qué necesita tu negocio.
         </p>
 
         {/* Botones de Anclas */}
@@ -45,7 +49,7 @@ export default function Servicios() {
             className="btn-outline !py-3 !px-6 text-sm font-semibold flex items-center gap-2"
           >
             <svg
-              className="w-4 h-4 text-beige"
+              className="w-4 h-4 text-accent"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -65,7 +69,7 @@ export default function Servicios() {
         <section id="digital" className="scroll-mt-24 py-12 border-b border-border">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
             <div>
-              <h2 className="text-3xl font-bold text-white font-fraunces">
+              <h2 className="text-3xl font-bold font-fraunces">
                 Presencia Digital
               </h2>
               <p className="text-text-muted text-sm font-manrope">
@@ -73,14 +77,14 @@ export default function Servicios() {
                 México.
               </p>
             </div>
-            <span className="px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent font-mono text-xs uppercase font-bold">
+            <span className="px-3 py-1 rounded-full bg-accent-light border border-accent/20 text-accent font-mono text-xs uppercase font-bold">
               Marketing &amp; Desarrollo
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
-              <div className="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -95,7 +99,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 SEO Local &amp; Nacional
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -107,7 +111,7 @@ export default function Servicios() {
             </div>
 
             <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
-              <div className="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -122,7 +126,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 Publicidad en Meta Ads
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -133,7 +137,7 @@ export default function Servicios() {
             </div>
 
             <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
-              <div className="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -148,7 +152,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 Pautas en Google Ads
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -159,7 +163,7 @@ export default function Servicios() {
             </div>
 
             <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent transition-colors">
-              <div className="w-10 h-10 bg-accent/10 text-accent rounded-lg flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -174,7 +178,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 Desarrollo Web (Next.js &amp; CSP)
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -190,21 +194,21 @@ export default function Servicios() {
         <section id="fisico" className="scroll-mt-24 py-20 border-b border-border">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
             <div>
-              <h2 className="text-3xl font-bold text-white font-fraunces">
+              <h2 className="text-3xl font-bold font-fraunces">
                 Presencia Física (Taller)
               </h2>
               <p className="text-text-muted text-sm font-manrope">
                 Prendas y artículos corporativos producidos en nuestra propia planta.
               </p>
             </div>
-            <span className="px-3 py-1 rounded-full bg-beige/10 border border-beige/20 text-beige font-mono text-xs uppercase font-bold">
+            <span className="px-3 py-1 rounded-full bg-accent-light border border-accent/20 text-accent font-mono text-xs uppercase font-bold">
               Taller de Serigrafía Propio
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-beige transition-colors">
-              <div className="w-10 h-10 bg-beige/10 text-beige rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -219,7 +223,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 Serigrafía Textil Profesional
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -229,8 +233,8 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-beige transition-colors">
-              <div className="w-10 h-10 bg-beige/10 text-beige rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -245,7 +249,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 Uniformes Bordados Corporativos
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -255,8 +259,8 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-beige transition-colors">
-              <div className="w-10 h-10 bg-beige/10 text-beige rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -271,7 +275,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 Merchandising &amp; Regalos
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -281,8 +285,8 @@ export default function Servicios() {
               </p>
             </div>
 
-            <div className="bg-surface border border-border p-6 rounded-xl hover:border-beige transition-colors">
-              <div className="w-10 h-10 bg-beige/10 text-beige rounded-lg flex items-center justify-center mb-4">
+            <div className="bg-surface border border-border p-6 rounded-xl hover:border-accent/60 transition-colors">
+              <div className="w-10 h-10 bg-accent-light text-accent rounded-lg flex items-center justify-center mb-4">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -297,7 +301,7 @@ export default function Servicios() {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-white font-fraunces mb-2">
+              <h3 className="text-lg font-bold font-fraunces mb-2">
                 Letreros &amp; Lonas de Gran Formato
               </h3>
               <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -311,7 +315,7 @@ export default function Servicios() {
 
         {/* Tabla comparativa de paquetes */}
         <section className="py-20 border-b border-border">
-          <h2 className="text-3xl font-bold text-white font-fraunces text-center mb-12">
+          <h2 className="text-3xl font-bold font-fraunces text-center mb-12">
             Comparativa de Paquetes
           </h2>
 
@@ -319,29 +323,29 @@ export default function Servicios() {
             <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
                 <tr className="border-b border-border bg-surface">
-                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-white font-mono">
+                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-text font-mono">
                     Entregable / Beneficio
                   </th>
-                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent-light font-mono text-center">
+                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent font-mono text-center">
                     Arranque
                   </th>
                   <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent font-mono text-center bg-accent/5">
                     Negocio en Serio
                   </th>
-                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-beige font-mono text-center">
+                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent font-mono text-center">
                     Marca Completa
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border/60">
                 <tr>
-                  <td className="py-4 px-6 text-sm font-semibold text-white font-manrope">
+                  <td className="py-4 px-6 text-sm font-semibold text-text font-manrope">
                     Sitio Web / Desarrollo
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     Landing Page (1 sección)
                   </td>
-                  <td className="py-4 px-6 text-sm text-white text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
                     Sitio Web Corporativo (5 secciones)
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -349,13 +353,13 @@ export default function Servicios() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-sm font-semibold text-white font-manrope">
+                  <td className="py-4 px-6 text-sm font-semibold text-text font-manrope">
                     Campañas Digitales
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     Meta Ads Básica
                   </td>
-                  <td className="py-4 px-6 text-sm text-white text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
                     Meta Ads + Google Ads Integrados
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -363,13 +367,13 @@ export default function Servicios() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-sm font-semibold text-white font-manrope">
+                  <td className="py-4 px-6 text-sm font-semibold text-text font-manrope">
                     Gestión Redes Sociales
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope font-mono">
                     No incluido
                   </td>
-                  <td className="py-4 px-6 text-sm text-white text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
                     2 Redes (Facebook/IG)
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -377,13 +381,13 @@ export default function Servicios() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-sm font-semibold text-white font-manrope">
+                  <td className="py-4 px-6 text-sm font-semibold text-text font-manrope">
                     Serigrafía Textil (Taller)
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     20 Playeras básicas
                   </td>
-                  <td className="py-4 px-6 text-sm text-white text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
                     50 Playeras en Serigrafía
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -391,13 +395,13 @@ export default function Servicios() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-sm font-semibold text-white font-manrope">
+                  <td className="py-4 px-6 text-sm font-semibold text-text font-manrope">
                     Polos Bordadas (Uniformes)
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope font-mono">
                     No incluido
                   </td>
-                  <td className="py-4 px-6 text-sm text-white text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
                     15 Polos Bordadas
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -405,13 +409,13 @@ export default function Servicios() {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-6 text-sm font-semibold text-white font-manrope">
+                  <td className="py-4 px-6 text-sm font-semibold text-text font-manrope">
                     Merch &amp; Rotulación
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     10 Tazas + 1 Lona
                   </td>
-                  <td className="py-4 px-6 text-sm text-white text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
                     30 Tazas + 2 Displays Araña
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -425,13 +429,13 @@ export default function Servicios() {
 
         {/* Preguntas frecuentes (FAQ Accordion con details nativo) */}
         <section className="py-20 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white font-fraunces text-center mb-12">
+          <h2 className="text-3xl font-bold font-fraunces text-center mb-12">
             Preguntas Frecuentes
           </h2>
 
           <div className="space-y-4">
             <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex justify-between items-center font-semibold text-white cursor-pointer font-manrope select-none">
+              <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Tienen mínimos de compra en el taller de serigrafía?
                 <span className="transition group-open:rotate-180 text-accent">
                   <svg
@@ -458,7 +462,7 @@ export default function Servicios() {
             </details>
 
             <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex justify-between items-center font-semibold text-white cursor-pointer font-manrope select-none">
+              <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Cómo funciona la facturación de campañas digitales y uniformes?
                 <span className="transition group-open:rotate-180 text-accent">
                   <svg
@@ -486,7 +490,7 @@ export default function Servicios() {
             </details>
 
             <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex justify-between items-center font-semibold text-white cursor-pointer font-manrope select-none">
+              <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Cuánto tiempo tardan en entregar un sitio web y el paquete físico?
                 <span className="transition group-open:rotate-180 text-accent">
                   <svg
@@ -515,7 +519,7 @@ export default function Servicios() {
             </details>
 
             <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex justify-between items-center font-semibold text-white cursor-pointer font-manrope select-none">
+              <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Ustedes administran el presupuesto de anuncios de Google y Meta?
                 <span className="transition group-open:rotate-180 text-accent">
                   <svg
@@ -543,7 +547,7 @@ export default function Servicios() {
             </details>
 
             <details className="group bg-surface border border-border rounded-xl p-6 [&_summary::-webkit-details-marker]:hidden">
-              <summary className="flex justify-between items-center font-semibold text-white cursor-pointer font-manrope select-none">
+              <summary className="flex justify-between items-center font-semibold text-text cursor-pointer font-manrope select-none">
                 ¿Dónde se encuentra su taller físico de serigrafía?
                 <span className="transition group-open:rotate-180 text-accent">
                   <svg

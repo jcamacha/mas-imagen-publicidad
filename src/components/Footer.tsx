@@ -2,14 +2,14 @@ import Link from "next/link";
  
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a2e] text-white border-t border-gray-800 mt-20">
+    <footer className="bg-[#1a1a2e] text-[#ffffff] border-t border-gray-800 mt-20">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Columna Marca & Newsletter */}
           <div className="md:col-span-2 space-y-6">
             <Link
               href="/"
-              className="text-xl font-bold tracking-wider font-fraunces text-white"
+              className="text-xl font-bold tracking-wider font-fraunces text-[#ffffff]"
             >
               MÁS IMAGEN <span className="text-accent">PUBLICIDAD</span>
             </Link>
@@ -20,16 +20,16 @@ export default function Footer() {
             </p>
             {/* Newsletter Placeholder */}
             <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-white uppercase tracking-wider font-mono">
+              <h4 className="text-sm font-semibold text-[#ffffff] uppercase tracking-wider font-mono">
                 Suscríbete a nuestro boletín
               </h4>
               <div className="flex max-w-sm">
                 <input
                   type="email"
                   placeholder="Tu correo electrónico"
-                  className="bg-[#24243a] border border-gray-700 rounded-l-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-accent w-full font-manrope"
+                  className="bg-[#24243a] border border-gray-700 rounded-l-xl px-4 py-2 text-sm text-[#ffffff] focus:outline-none focus:border-accent w-full font-manrope"
                 />
-                <button className="bg-accent text-white px-4 py-2 rounded-r-xl text-sm font-semibold hover:bg-accent-hover transition-colors font-manrope cursor-pointer">
+                <button className="bg-accent text-[#ffffff] px-4 py-2 rounded-r-xl text-sm font-semibold hover:bg-accent-hover transition-colors font-manrope cursor-pointer">
                   Unirse
                 </button>
               </div>
@@ -38,14 +38,14 @@ export default function Footer() {
  
           {/* Columna Servicios */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
+            <h3 className="text-sm font-semibold text-[#ffffff] uppercase tracking-wider font-mono mb-4">
               Servicios
             </h3>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/servicios#digital"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-[#ffffff] transition-colors font-manrope"
                 >
                   Presencia Digital
                 </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios#fisico"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-[#ffffff] transition-colors font-manrope"
                 >
                   Presencia Física
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-[#ffffff] transition-colors font-manrope"
                 >
                   Taller de Serigrafía
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-[#ffffff] transition-colors font-manrope"
                 >
                   Planes Integrados
                 </Link>
@@ -79,14 +79,14 @@ export default function Footer() {
  
           {/* Columna Empresa & Contacto */}
           <div>
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
+            <h3 className="text-sm font-semibold text-[#ffffff] uppercase tracking-wider font-mono mb-4">
               Empresa
             </h3>
             <ul className="space-y-2 mb-6">
               <li>
                 <Link
                   href="/nosotros"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-[#ffffff] transition-colors font-manrope"
                 >
                   Nosotros
                 </Link>
@@ -94,7 +94,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/portafolio"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-[#ffffff] transition-colors font-manrope"
                 >
                   Portafolio
                 </Link>
@@ -102,14 +102,14 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contacto"
-                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-[#ffffff] transition-colors font-manrope"
                 >
                   Contacto
                 </Link>
               </li>
             </ul>
  
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
+            <h3 className="text-sm font-semibold text-[#ffffff] uppercase tracking-wider font-mono mb-4">
               Redes Sociales
             </h3>
             <div className="flex space-x-4">

@@ -63,7 +63,7 @@ export default function Testimonials() {
             </blockquote>
  
             <div className="mb-4">
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-mono font-bold tracking-wide uppercase text-accent bg-accent/10 border border-accent/20">
+              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-mono font-bold tracking-wide uppercase text-accent bg-accent-light border border-accent/20">
                 Métrica: {TESTIMONIALS[index].metric}
               </span>
             </div>

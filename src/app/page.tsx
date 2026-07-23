@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-between selection:bg-accent/10 selection:text-accent">
+    <div className="min-h-screen bg-white flex flex-col justify-between selection:bg-accent-light selection:text-accent">
       <Header />
 
       <main className="flex-grow">
@@ -14,18 +14,18 @@ export default function Home() {
         <section className="py-20 md:py-28 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="flex-1 space-y-6 text-left">
             {/* Small Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#fdf0e6] border border-accent/20 text-accent text-xs font-semibold tracking-wider font-manrope">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-light border border-accent/20 text-accent text-xs font-semibold tracking-wider font-manrope">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              EdoMex • Taller propio
+              Taller propio · 12 años · EdoMex
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#374151] leading-tight font-fraunces">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces">
               Tu negocio, en digital y en físico.{" "}
-              <span className="text-accent block sm:inline">Sin complicaciones.</span>
+              <span className="text-accent block sm:inline">En un solo lugar.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-text leading-relaxed font-manrope max-w-xl">
-              Hacemos tu página web, tus anuncios, tus playeras. Todo en un solo lugar, con taller propio desde hace 12 años.
+              Somos la única agencia en EdoMex con taller de serigrafía propio. Hacemos tu web, tus anuncios y tus playeras. Sin complicaciones, desde hace 12 años.
             </p>
 
             <div className="pt-4">
@@ -55,7 +55,7 @@ export default function Home() {
         <section className="py-20 md:py-24 px-6 bg-white border-t border-border">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#374151] font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
                 Lo que hacemos por tu negocio
               </h2>
               <p className="text-text-muted font-manrope text-base max-w-xl mx-auto">
@@ -67,7 +67,7 @@ export default function Home() {
               {/* Tarjeta 1: Tu página web */}
               <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -82,7 +82,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-[#374151] font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3">
                     Tu página web
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
@@ -102,7 +102,7 @@ export default function Home() {
               {/* Tarjeta 2: Tus anuncios */}
               <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -117,7 +117,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-[#374151] font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3">
                     Tus anuncios
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
@@ -137,7 +137,7 @@ export default function Home() {
               {/* Tarjeta 3: Tus playeras y más */}
               <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -152,7 +152,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-[#374151] font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3">
                     Tus playeras y más
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
@@ -172,95 +172,89 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SECTION 3: CASOS REALES */}
+        {/* SECTION 3: ¿POR QUÉ NOSOTROS? */}
         <section className="py-20 md:py-24 px-6 bg-white border-t border-border">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-left mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#374151] font-fraunces">
-                Negocios como el tuyo que ya crecen con nosotros
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+                Mucho más que una agencia de marketing
               </h2>
-              <p className="text-text-muted font-manrope text-base max-w-xl">
-                Casos reales de pequeñas y medianas empresas mexicanas que decidieron unificar su publicidad digital y física.
-              </p>
             </div>
 
-            <div className="space-y-12">
-              {/* Tarjeta Caso 1 */}
-              <div className="flex flex-col md:flex-row items-center bg-[#f8f8fa] border border-border rounded-2xl overflow-hidden shadow-sm">
-                <div className="relative w-full md:w-80 lg:w-96 aspect-[4/3] md:aspect-square shrink-0">
-                  <Image
-                    src="/caso-taqueria.jpg"
-                    alt="Uniforme y sitio web de Taquería El Güero"
-                    fill
-                    className="object-cover"
-                  />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {/* Columna 1 */}
+              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col">
+                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
                 </div>
-                <div className="p-8 md:p-10 space-y-4">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider font-mono">
-                    Restaurantes &bull; CDMX
-                  </span>
-                  <h3 className="text-2xl font-bold text-[#374151] font-fraunces leading-tight">
-                    Taquería El Güero
-                  </h3>
-                  <blockquote className="text-text text-base leading-relaxed italic font-manrope">
-                    &ldquo;+60% más clientes con su web y uniformes nuevos&rdquo;
-                  </blockquote>
-                  <p className="text-text-muted text-sm leading-relaxed font-manrope">
-                    Creamos un menú digital interactivo y optimizamos su ubicación en Google Maps. Además, el taller bordó 30 camisas polo con el nuevo logo, incrementando notablemente la confianza de los clientes en local.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold font-fraunces mb-3">
+                  Taller propio
+                </h3>
+                <p className="text-text-muted text-sm leading-relaxed font-manrope">
+                  Desde hace 12 años producimos playeras, uniformes, tazas y displays en nuestro taller de serigrafía. No subcontratamos: controlamos calidad, tiempos y precio.
+                </p>
               </div>
 
-              {/* Tarjeta Caso 2 */}
-              <div className="flex flex-col md:flex-row items-center bg-[#f8f8fa] border border-border rounded-2xl overflow-hidden shadow-sm">
-                <div className="relative w-full md:w-80 lg:w-96 aspect-[4/3] md:aspect-square shrink-0">
-                  <Image
-                    src="/caso-dental.jpg"
-                    alt="Página web y tarjetas de Clínica Dental Juárez"
-                    fill
-                    className="object-cover"
-                  />
+              {/* Columna 2 */}
+              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col">
+                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                    />
+                  </svg>
                 </div>
-                <div className="p-8 md:p-10 space-y-4">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider font-mono">
-                    Salud &bull; EdoMex
-                  </span>
-                  <h3 className="text-2xl font-bold text-[#374151] font-fraunces leading-tight">
-                    Clínica Dental Juárez
-                  </h3>
-                  <blockquote className="text-text text-base leading-relaxed italic font-manrope">
-                    &ldquo;+45% citas agendadas con su nueva web y folletos&rdquo;
-                  </blockquote>
-                  <p className="text-text-muted text-sm leading-relaxed font-manrope">
-                    Desarrollamos una página informativa limpia con agendamiento directo por WhatsApp y lanzamos campañas locales de anuncios. También imprimimos folletos explicativos y tarjetas de citas para los pacientes del consultorio.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold font-fraunces mb-3">
+                  Digital + físico
+                </h3>
+                <p className="text-text-muted text-sm leading-relaxed font-manrope">
+                  Nadie más te ofrece la página web, los anuncios Y las playeras en un solo lugar. Una factura, un equipo, cero dolores de cabeza.
+                </p>
               </div>
 
-              {/* Tarjeta Caso 3 */}
-              <div className="flex flex-col md:flex-row items-center bg-[#f8f8fa] border border-border rounded-2xl overflow-hidden shadow-sm">
-                <div className="relative w-full md:w-80 lg:w-96 aspect-[4/3] md:aspect-square shrink-0">
-                  <Image
-                    src="/caso-cafe.jpg"
-                    alt="Mockup de empaque y web de Café de Toluca"
-                    fill
-                    className="object-cover"
-                  />
+              {/* Columna 3 */}
+              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col">
+                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"
+                    />
+                  </svg>
                 </div>
-                <div className="p-8 md:p-10 space-y-4">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-wider font-mono">
-                    Cafetería &bull; Toluca
-                  </span>
-                  <h3 className="text-2xl font-bold text-[#374151] font-fraunces leading-tight">
-                    Café de Toluca
-                  </h3>
-                  <blockquote className="text-text text-base leading-relaxed italic font-manrope">
-                    &ldquo;Incrementó 80% sus ventas con tienda en línea y bolsas impresas&rdquo;
-                  </blockquote>
-                  <p className="text-text-muted text-sm leading-relaxed font-manrope">
-                    Pusimos en marcha una plataforma de comercio electrónico que automatiza sus envíos de granos de café. A la par, el taller produjo calcomanías troqueladas y estampó bolsas de papel kraft con tintas ecológicas.
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold font-fraunces mb-3">
+                  Resultados que se miden
+                </h3>
+                <p className="text-text-muted text-sm leading-relaxed font-manrope">
+                  No hacemos humo. Cada campaña tiene métricas claras: visitas, leads, ventas. Te reportamos resultados, no excusas.
+                </p>
               </div>
             </div>
           </div>
@@ -270,7 +264,7 @@ export default function Home() {
         <section className="py-20 md:py-24 px-6 bg-white border-t border-border">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#374151] font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
                 Así de fácil es trabajar con nosotros
               </h2>
               <p className="text-text-muted font-manrope text-base max-w-xl mx-auto">
@@ -284,7 +278,7 @@ export default function Home() {
                 <div className="text-6xl font-bold font-fraunces text-accent tracking-tight">
                   1
                 </div>
-                <h3 className="text-xl font-bold text-[#374151] font-fraunces">
+                <h3 className="text-xl font-bold font-fraunces">
                   Platicamos
                 </h3>
                 <p className="text-text text-sm leading-relaxed font-manrope max-w-xs mx-auto">
@@ -297,7 +291,7 @@ export default function Home() {
                 <div className="text-6xl font-bold font-fraunces text-accent tracking-tight">
                   2
                 </div>
-                <h3 className="text-xl font-bold text-[#374151] font-fraunces">
+                <h3 className="text-xl font-bold font-fraunces">
                   Creamos
                 </h3>
                 <p className="text-text text-sm leading-relaxed font-manrope max-w-xs mx-auto">
@@ -310,7 +304,7 @@ export default function Home() {
                 <div className="text-6xl font-bold font-fraunces text-accent tracking-tight">
                   3
                 </div>
-                <h3 className="text-xl font-bold text-[#374151] font-fraunces">
+                <h3 className="text-xl font-bold font-fraunces">
                   Creces
                 </h3>
                 <p className="text-text text-sm leading-relaxed font-manrope max-w-xs mx-auto">
@@ -325,7 +319,7 @@ export default function Home() {
         <section id="contacto-final" className="py-20 px-6 bg-[#f8f8fa] border-t border-border">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#374151] font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
                 ¿Empezamos?
               </h2>
               <p className="text-text text-base font-manrope">

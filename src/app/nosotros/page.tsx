@@ -9,48 +9,29 @@ export default function Nosotros() {
  
       <main className="flex-grow py-20 px-6 max-w-4xl mx-auto w-full">
         {/* H1 Animado */}
-        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#374151] mb-6 font-fraunces text-center">
+        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center">
           Sobre <span className="text-accent">Nosotros</span>
         </AnimatedTitle>
  
         <p className="text-text font-manrope text-lg text-center mb-16 max-w-2xl mx-auto">
-          Conoce la historia, misión y el equipo detrás de Más Imagen Publicidad,
-          la agencia que conecta el píxel con la prenda.
+          Nacimos como taller de serigrafía hace 12 años. Hoy somos la única agencia que integra marketing digital con producción física propia.
         </p>
  
         {/* Sección Historia */}
         <div className="space-y-12">
           <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
-            <h2 className="text-2xl font-bold text-[#374151] font-fraunces mb-4">
+            <h2 className="text-2xl font-bold font-fraunces mb-4">
               Nuestra Historia
             </h2>
             <div className="space-y-4 text-text font-manrope text-sm leading-relaxed">
               <p>
-                Todo comenzó en el Estado de México hace 12 años bajo el nombre
-                de <strong>&ldquo;Más Imagen / Serigrafics&rdquo;</strong>, un
-                pequeño pero dedicado taller familiar de serigrafía. Desde
-                nuestros inicios, nos enfocamos en vestir a las micro y pequeñas
-                empresas de la región con playeras promocionales, uniformes
-                industriales y artículos de merch que destacaran del resto.
+                Todo comenzó en el Estado de México hace 12 años con <strong>Serigrafics</strong>, nuestra empresa hermana y taller de serigrafía. Desde nuestros inicios, nos enfocamos en vestir a las micro y pequeñas empresas de la región con playeras promocionales, uniformes industriales y artículos de merch que destacaran del resto.
               </p>
               <p>
-                Con el paso de los años y la digitalización acelerada de los
-                negocios, nos dimos cuenta de que nuestros clientes necesitaban
-                algo más que playeras impresas para vender: necesitaban ser
-                encontrados en internet. Las agencias tradicionales les diseñaban
-                webs increíbles, pero no sabían cómo traducir eso en ropa física
-                para su personal de campo. Los talleres de serigrafía les
-                imprimían uniformes, pero no entendían de paletas de colores web
-                o logotipos vectorizados de alta fidelidad.
+                Con el paso de los años y la digitalización acelerada de los negocios, nos dimos cuenta de que nuestros clientes necesitaban algo más que playeras impresas para vender: necesitaban ser encontrados en internet. Las agencias tradicionales les diseñaban webs increíbles, pero no sabían cómo traducir eso en ropa física para su personal de campo. Los talleres de serigrafía les imprimían uniformes, pero no entendían de paletas de colores web o logotipos vectorizados de alta fidelidad.
               </p>
               <p>
-                Fue así como en 2020 decidimos dar el paso evolutivo e integrar
-                servicios de <strong>Marketing Digital y SEO</strong> directamente
-                en nuestra oferta de valor. Hoy en día, somos la única agencia
-                integral en el EdoMex que te entrega tu campaña publicitaria
-                digital en Google y Meta, tu página web adaptada a CSP, y los
-                uniformes listos para tu equipo en el local físico, todo en una
-                sola factura y bajo el mismo estándar de calidad.
+                Fue así como decidimos dar el paso evolutivo e integrar servicios de <strong>Marketing Digital y SEO</strong> directamente en nuestra oferta de valor bajo <strong>Más Imagen Publicidad</strong>. Hoy en día, de la mano de nuestro taller y empresa hermana Serigrafics, somos la única agencia integral en el EdoMex que te entrega tu campaña publicitaria digital en Google y Meta, tu página web, y los uniformes listos para tu equipo en el local físico, todo en un solo lugar.
               </p>
             </div>
           </div>
@@ -58,38 +39,31 @@ export default function Nosotros() {
           {/* Misión y Valores */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold text-[#374151] font-fraunces mb-4">
+              <h2 className="text-2xl font-bold font-fraunces mb-4">
                 Misión
               </h2>
               <p className="text-text font-manrope text-sm leading-relaxed">
-                Empoderar a las PyMEs mexicanas integrando su identidad física y
-                presencia digital en una sola estrategia coherente, facilitando
-                la gestión de proveedores con transparencia, velocidad y
-                excelencia técnica.
+                Empoderar a las PyMEs mexicanas integrando su identidad física y presencia digital en una sola estrategia coherente, facilitando la gestión de proveedores con transparencia, velocidad y excelencia técnica.
               </p>
             </div>
  
             <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold text-[#374151] font-fraunces mb-4">
+              <h2 className="text-2xl font-bold font-fraunces mb-4">
                 Valores
               </h2>
               <ul className="text-text font-manrope text-sm leading-relaxed space-y-3">
                 <li>
                   <strong className="text-accent">Sinceridad:</strong>{" "}
-                  Entregamos reportes basados en conversiones reales, no en
-                  &ldquo;métricas de vanidad&rdquo;.
+                  Entregamos reportes basados en conversiones reales, no en &ldquo;métricas de vanidad&rdquo;.
                 </li>
                 <li>
                   <strong className="text-accent">
                     Calidad de Taller:
                   </strong>{" "}
-                  Cada costura y cada línea de código pasa por nuestra
-                  inspección manual.
+                  Cada costura y cada línea de código pasa por nuestra inspección manual.
                 </li>
                 <li>
-                  <strong className="text-accent">Cercanía:</strong> Somos
-                  del EdoMex y entendemos los retos de los negocios de la
-                  región.
+                  <strong className="text-accent">Cercanía:</strong> Somos del EdoMex y entendemos los retos de los negocios de la región.
                 </li>
               </ul>
             </div>
@@ -97,7 +71,7 @@ export default function Nosotros() {
  
           {/* Foto Placeholder Equipo */}
           <div className="bg-[#f8f8fa] border border-border rounded-2xl p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
-            <div className="w-16 h-16 rounded-full bg-accent/10 text-accent flex items-center justify-center mb-4">
+            <div className="w-16 h-16 rounded-full bg-accent-light text-accent flex items-center justify-center mb-4">
               <svg
                 className="w-8 h-8"
                 fill="none"
@@ -112,7 +86,7 @@ export default function Nosotros() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-[#374151] font-fraunces mb-2">
+            <h3 className="text-xl font-bold font-fraunces mb-2">
               Nuestro Equipo
             </h3>
             <p className="text-text-muted font-manrope text-xs max-w-md mb-6">

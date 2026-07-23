@@ -19,10 +19,10 @@ export default function ServiceCard({
     <div className="bg-white border border-border p-8 rounded-2xl flex flex-col justify-between h-full">
       <div>
         <div
-          className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-accent/10 text-accent [&>svg]:w-6 [&>svg]:h-6"
+          className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent [&>svg]:w-6 [&>svg]:h-6"
           dangerouslySetInnerHTML={{ __html: icon }}
         />
-        <h3 className="text-2xl font-bold mb-3 font-fraunces text-gray-800">
+        <h3 className="text-2xl font-bold mb-3 font-fraunces">
           {title}
         </h3>
         <p className="text-text-muted text-base leading-relaxed mb-6 font-manrope">

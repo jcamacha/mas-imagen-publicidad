@@ -10,8 +10,8 @@ export default function Contacto() {
 
       <main className="flex-grow py-20 px-6 max-w-6xl mx-auto w-full">
         {/* H1 Animado */}
-        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 font-fraunces text-center">
-          Ponte en <span className="gradient-text">Contacto</span>
+        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center">
+          Ponte en <span className="text-accent">Contacto</span>
         </AnimatedTitle>
 
         <p className="text-text-muted text-center font-manrope text-lg mb-16 max-w-2xl mx-auto">
@@ -23,13 +23,13 @@ export default function Contacto() {
           {/* Información de Contacto */}
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-surface border border-border p-8 rounded-2xl space-y-6">
-              <h2 className="text-2xl font-bold text-white font-fraunces">
+              <h2 className="text-2xl font-bold font-fraunces">
                 Datos de Contacto
               </h2>
 
               {/* Teléfono */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-light text-accent flex items-center justify-center shrink-0">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -50,7 +50,7 @@ export default function Contacto() {
                   </h4>
                   <a
                     href="tel:+525577196924"
-                    className="text-white hover:text-accent font-semibold transition-colors font-manrope"
+                    className="text-text hover:text-accent font-semibold transition-colors font-manrope"
                   >
                     +52 55 7719 6924
                   </a>
@@ -59,7 +59,7 @@ export default function Contacto() {
 
               {/* Correo */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-light text-accent flex items-center justify-center shrink-0">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -80,7 +80,7 @@ export default function Contacto() {
                   </h4>
                   <a
                     href="mailto:contacto@masimagenpublicidad.mx"
-                    className="text-white hover:text-accent font-semibold transition-colors font-manrope"
+                    className="text-text hover:text-accent font-semibold transition-colors font-manrope"
                   >
                     contacto@masimagenpublicidad.mx
                   </a>
@@ -89,7 +89,7 @@ export default function Contacto() {
 
               {/* Dirección */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-light text-accent flex items-center justify-center shrink-0">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -114,7 +114,7 @@ export default function Contacto() {
                   <h4 className="text-xs font-bold uppercase tracking-wider text-text-muted font-mono mb-1">
                     Dirección del Taller
                   </h4>
-                  <p className="text-white text-sm font-manrope leading-relaxed">
+                  <p className="text-text text-sm font-manrope leading-relaxed">
                     Av. Primero de Mayo 120, Col. San Andrés Atoto,
                     <br />
                     53500 Naucalpan de Juárez, Estado de México, México.
@@ -150,7 +150,7 @@ export default function Contacto() {
         href="https://wa.me/525577196924"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center border border-[#1ebd5b]"
+        className="fixed bottom-6 right-6 z-40 bg-[#25D366] text-[#ffffff] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center border border-[#1ebd5b]"
         aria-label="Contactar por WhatsApp"
       >
         <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">

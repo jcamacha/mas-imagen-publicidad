@@ -16,17 +16,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-bold tracking-wider font-fraunces text-text hover:text-accent transition-colors"
+              className="text-xl md:text-2xl font-fraunces hover:text-accent transition-colors"
             >
-              MÁS IMAGEN <span className="text-accent">PUBLICIDAD</span>
+              <span className="font-extrabold text-text">MÁS IMAGEN</span>{" "}
+              <span className="text-accent font-medium">PUBLICIDAD</span>
             </Link>
           </div>
- 
+
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
@@ -37,64 +38,16 @@ export default function Header() {
             >
               Inicio
             </Link>
- 
-            {/* Dropdown hover */}
-            <div
-              className="relative"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
+
+            <Link
+              href="/servicios"
+              className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
+                isActive("/servicios") ? "text-accent" : "text-text-muted hover:text-text"
+              }`}
             >
-              <button
-                className={`text-sm font-semibold transition-colors hover:text-accent font-manrope flex items-center gap-1 cursor-pointer py-2 ${
-                  pathname.startsWith("/servicios") ? "text-accent" : "text-text-muted hover:text-text"
-                }`}
-              >
-                Servicios
-                <svg
-                  className={`w-4 h-4 transition-transform duration-200 ${
-                    isDropdownOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
- 
-              {isDropdownOpen && (
-                <div className="absolute left-0 mt-0 w-48 rounded-xl shadow-lg bg-white border border-border py-2 z-50">
-                  <Link
-                    href="/servicios#digital"
-                    className="block px-4 py-2.5 text-sm text-text-muted hover:text-text hover:bg-surface transition-colors font-manrope"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    Presencia Digital
-                  </Link>
-                  <Link
-                    href="/servicios#fisico"
-                    className="block px-4 py-2.5 text-sm text-text-muted hover:text-text hover:bg-surface transition-colors font-manrope"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    Presencia Física (Taller)
-                  </Link>
-                  <hr className="border-border my-1" />
-                  <Link
-                    href="/servicios"
-                    className="block px-4 py-2.5 text-sm font-bold text-accent hover:text-accent-hover hover:bg-surface transition-colors font-manrope"
-                    onClick={() => setIsDropdownOpen(false)}
-                  >
-                    Ver Todos
-                  </Link>
-                </div>
-              )}
-            </div>
- 
+              Servicios
+            </Link>
+
             <Link
               href="/nosotros"
               className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
@@ -103,16 +56,7 @@ export default function Header() {
             >
               Nosotros
             </Link>
- 
-            <Link
-              href="/portafolio"
-              className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
-                isActive("/portafolio") ? "text-accent" : "text-text-muted hover:text-text"
-              }`}
-            >
-              Portafolio
-            </Link>
- 
+
             <Link
               href="/contacto"
               className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
@@ -122,7 +66,7 @@ export default function Header() {
               Contacto
             </Link>
           </nav>
- 
+
           {/* CTA */}
           <div className="hidden md:block">
             <Link
@@ -132,7 +76,7 @@ export default function Header() {
               Cotizar
             </Link>
           </div>
- 
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -176,7 +120,7 @@ export default function Header() {
           </div>
         </div>
       </div>
- 
+
       {/* Mobile Menu */}
       {isOpen && (
         <div
@@ -187,39 +131,29 @@ export default function Header() {
             href="/"
             className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
               isActive("/")
-                ? "bg-accent/10 text-accent"
+                ? "bg-accent-light text-accent"
                 : "text-text-muted hover:text-text hover:bg-surface"
             }`}
             onClick={() => setIsOpen(false)}
           >
             Inicio
           </Link>
-          <div className="px-3 py-1">
-            <span className="block text-xs font-bold uppercase tracking-wider text-text-muted mb-2 font-mono">
-              Servicios
-            </span>
-            <div className="pl-3 space-y-2 border-l border-border">
-              <Link
-                href="/servicios#digital"
-                className="block py-1 text-sm text-text-muted hover:text-text font-manrope"
-                onClick={() => setIsOpen(false)}
-              >
-                Presencia Digital
-              </Link>
-              <Link
-                href="/servicios#fisico"
-                className="block py-1 text-sm text-text-muted hover:text-text font-manrope"
-                onClick={() => setIsOpen(false)}
-              >
-                Presencia Física
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/servicios"
+            className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
+              isActive("/servicios")
+                ? "bg-accent-light text-accent"
+                : "text-text-muted hover:text-text hover:bg-surface"
+            }`}
+            onClick={() => setIsOpen(false)}
+          >
+            Servicios
+          </Link>
           <Link
             href="/nosotros"
             className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
               isActive("/nosotros")
-                ? "bg-accent/10 text-accent"
+                ? "bg-accent-light text-accent"
                 : "text-text-muted hover:text-text hover:bg-surface"
             }`}
             onClick={() => setIsOpen(false)}
@@ -227,21 +161,10 @@ export default function Header() {
             Nosotros
           </Link>
           <Link
-            href="/portafolio"
-            className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
-              isActive("/portafolio")
-                ? "bg-accent/10 text-accent"
-                : "text-text-muted hover:text-text hover:bg-surface"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            Portafolio
-          </Link>
-          <Link
             href="/contacto"
             className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
               isActive("/contacto")
-                ? "bg-accent/10 text-accent"
+                ? "bg-accent-light text-accent"
                 : "text-text-muted hover:text-text hover:bg-surface"
             }`}
             onClick={() => setIsOpen(false)}
