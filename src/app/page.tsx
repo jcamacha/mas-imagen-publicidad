@@ -19,7 +19,7 @@ export default function Home() {
               Taller propio · 12 años · EdoMex
             </div>
  
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces hero-blend">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces text-text">
               Tu negocio, en digital y en físico.{" "}
               <span>En un solo lugar.</span>
             </h1>

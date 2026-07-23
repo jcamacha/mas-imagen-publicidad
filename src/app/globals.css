@@ -85,44 +85,6 @@ section {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.80' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* ALL text — pure black on yellow, pure white on wave */
-h1, h2, h3, h4, h5, h6, p, span, li, label, a {
-  mix-blend-mode: difference;
-  color: #ffffff;
-  filter: url("#bnw-filter");
-}
-
-/* Exceptions — never blend */
-.isolate-blend, .isolate-blend *,
-.bg-dark-section, .bg-dark-section *,
-.btn-primary, .btn-outline, button,
-input, textarea, select,
-canvas, iframe, img {
-  mix-blend-mode: normal;
-}
-
-/* Dark sections keep white text */
-.bg-dark-section h2,
-.bg-dark-section h3,
-.bg-dark-section p,
-.bg-dark-section a {
-  mix-blend-mode: normal;
-  color: #ffffff;
-}
-
-/* Hero blend — kept for specificity but now redundant */
-.hero-blend {
-  mix-blend-mode: difference;
-  color: #ffffff;
-  position: relative;
-  z-index: 10;
-}
-
-/* Isolation — prevents blend mode leakage */
-.isolate-blend {
-  isolation: isolate;
-}
-
 /* Hide honeypot */
 .hidden-field {
   opacity: 0;

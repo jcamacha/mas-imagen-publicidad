@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope, JetBrains_Mono } from "next/font/google";
 import OrganicTrail from "@/components/OrganicTrail";
+import WaveContrast from "@/components/WaveContrast";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -54,18 +55,8 @@ export default function RootLayout({
       <body
         className={`${fraunces.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        {/* SVG filter for pure black & white text */}
-        <svg style={{ position: "absolute", width: 0, height: 0 }} aria-hidden="true">
-          <filter id="bnw-filter">
-            <feColorMatrix type="saturate" values="0" />
-            <feComponentTransfer>
-              <feFuncR type="linear" slope="5" intercept="-2" />
-              <feFuncG type="linear" slope="5" intercept="-2" />
-              <feFuncB type="linear" slope="5" intercept="-2" />
-            </feComponentTransfer>
-          </filter>
-        </svg>
         <OrganicTrail />
+        <WaveContrast />
         {children}
       </body>
     </html>
