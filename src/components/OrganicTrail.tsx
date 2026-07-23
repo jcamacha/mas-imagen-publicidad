@@ -29,11 +29,11 @@ export default function OrganicTrail() {
     resize();
     window.addEventListener("resize", resize);
 
-    // Waves: fast, dark, visible
+    // Waves: full-page coverage, fast, dark
     const waves = [
-      { amp: h * 0.35, freq: 0.0005, speed: 0.30, phase: 0,   yOff: h * 0.35, opacity: 0.90 },
-      { amp: h * 0.25, freq: 0.0008, speed: 0.35, phase: 2,   yOff: h * 0.55, opacity: 0.75 },
-      { amp: h * 0.30, freq: 0.0006, speed: -0.32, phase: 4,   yOff: h * 0.70, opacity: 0.65 },
+      { amp: h * 0.40, freq: 0.0004, speed: 0.28, phase: 0,   yOff: h * 0.20, opacity: 0.85 },
+      { amp: h * 0.35, freq: 0.0006, speed: 0.34, phase: 2,   yOff: h * 0.50, opacity: 0.75 },
+      { amp: h * 0.38, freq: 0.0005, speed: -0.30, phase: 4,   yOff: h * 0.80, opacity: 0.65 },
     ];
 
     function draw() {
