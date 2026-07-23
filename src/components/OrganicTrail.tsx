@@ -83,6 +83,7 @@ export default function OrganicTrail() {
       className="fixed inset-0 w-full h-full block z-0"
       style={{ pointerEvents: "none", filter: "blur(25px)" }}
       aria-hidden="true"
+      id="trail-canvas"
     />
   );
 }

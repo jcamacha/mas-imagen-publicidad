@@ -55,6 +55,21 @@ export default function RootLayout({
         className={`${fraunces.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <OrganicTrail />
+        {/* SVG luminance mask — extracts brightness from trail canvas */}
+        <svg style={{ position: "absolute", width: 0, height: 0 }} aria-hidden="true">
+          <filter id="luma-to-alpha">
+            <feImage href="#trail-canvas" result="bg" />
+            <feColorMatrix
+              in="bg"
+              type="matrix"
+              values="0 0 0 0  0.4
+                      0 0 0 0  0.4
+                      0 0 0 0  0.4
+                      0.2126 0.7152 0.0722 0 0"
+              result="luma"
+            />
+          </filter>
+        </svg>
         {children}
       </body>
     </html>

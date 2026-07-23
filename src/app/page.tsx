@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SimpleContactForm from "@/components/SimpleContactForm";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import WaveText from "@/components/WaveText";
+import LumaText from "@/components/LumaText";
 import Link from "next/link";
 
 export default function Home() {
@@ -21,10 +22,10 @@ export default function Home() {
             </div>
  
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces">
-              <WaveText>
+              <LumaText>
                 Tu negocio, en digital y en físico.{" "}
                 En un solo lugar.
-              </WaveText>
+              </LumaText>
             </h1>
  
             <p className="text-lg md:text-xl text-text-muted leading-relaxed font-manrope max-w-xl">
