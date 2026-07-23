@@ -55,7 +55,6 @@ export default function RootLayout({
         className={`${fraunces.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <OrganicTrail />
-        <div className="grain-overlay" />
         {children}
       </body>
     </html>

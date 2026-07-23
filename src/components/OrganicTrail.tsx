@@ -29,11 +29,11 @@ export default function OrganicTrail() {
     resize();
     window.addEventListener("resize", resize);
 
-    // Wave parameters
+    // Waves: fast, dark, visible
     const waves = [
-      { amp: h * 0.22, freq: 0.0008, speed: 0.03, phase: 0, yOff: h * 0.35, opacity: 0.55 },
-      { amp: h * 0.18, freq: 0.0012, speed: 0.04, phase: 2, yOff: h * 0.55, opacity: 0.40 },
-      { amp: h * 0.15, freq: 0.0010, speed: -0.035, phase: 4, yOff: h * 0.70, opacity: 0.30 },
+      { amp: h * 0.35, freq: 0.0005, speed: 0.30, phase: 0,   yOff: h * 0.35, opacity: 0.90 },
+      { amp: h * 0.25, freq: 0.0008, speed: 0.35, phase: 2,   yOff: h * 0.55, opacity: 0.75 },
+      { amp: h * 0.30, freq: 0.0006, speed: -0.32, phase: 4,   yOff: h * 0.70, opacity: 0.65 },
     ];
 
     function draw() {
@@ -45,25 +45,22 @@ export default function OrganicTrail() {
         ctx.beginPath();
         ctx.moveTo(0, h);
 
-        // Draw wave across the screen
         for (let x = 0; x <= w; x += 2) {
           const y =
             wave.yOff +
             Math.sin(x * wave.freq + t * wave.speed + wave.phase) * wave.amp +
-            Math.sin(x * wave.freq * 2.3 + t * wave.speed * 1.4) * wave.amp * 0.3;
+            Math.sin(x * wave.freq * 2.1 + t * wave.speed * 1.3 + wave.phase) * wave.amp * 0.35;
           ctx.lineTo(x, y);
         }
 
         ctx.lineTo(w, h);
         ctx.closePath();
 
-        // Fill with gradient
         const gradient = ctx.createLinearGradient(0, wave.yOff - wave.amp, 0, wave.yOff + wave.amp);
-        gradient.addColorStop(0, `rgba(20, 20, 20, 0)`);
-        gradient.addColorStop(0.3, `rgba(20, 20, 20, ${wave.opacity * 0.5})`);
-        gradient.addColorStop(0.5, `rgba(20, 20, 20, ${wave.opacity})`);
-        gradient.addColorStop(0.7, `rgba(20, 20, 20, ${wave.opacity * 0.5})`);
-        gradient.addColorStop(1, `rgba(20, 20, 20, 0)`);
+        gradient.addColorStop(0, `rgba(15, 15, 15, ${wave.opacity})`);
+        gradient.addColorStop(0.4, `rgba(15, 15, 15, ${wave.opacity})`);
+        gradient.addColorStop(0.7, `rgba(15, 15, 15, ${wave.opacity * 0.5})`);
+        gradient.addColorStop(1, `rgba(15, 15, 15, 0)`);
 
         ctx.fillStyle = gradient;
         ctx.fill();
@@ -83,8 +80,8 @@ export default function OrganicTrail() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full block"
-      style={{ pointerEvents: "none", filter: "blur(60px)" }}
+      className="fixed inset-0 w-full h-full block z-0"
+      style={{ pointerEvents: "none", filter: "blur(25px)" }}
       aria-hidden="true"
     />
   );

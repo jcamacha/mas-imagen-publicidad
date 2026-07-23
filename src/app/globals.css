@@ -89,6 +89,13 @@ section {
 .hero-blend {
   mix-blend-mode: difference;
   color: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+/* Container must allow blending */
+.hero-blend-container {
+  isolation: auto !important;
 }
 
 /* Isolation — prevents blend mode leakage */
