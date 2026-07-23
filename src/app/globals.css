@@ -3,15 +3,15 @@
 @theme inline {
   --font-fraunces: "Fraunces", serif;
   --font-manrope: "Manrope", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-  --color-accent: #6366f1;
-  --color-accent-light: #8b5cf6;
-  --color-beige: #8b7355;
-  --color-bg: #09090b;
-  --color-surface: #131315;
-  --color-border: #1e1e22;
-  --color-text: #fafafa;
-  --color-text-muted: #a1a1aa;
+  --color-accent: #e8752a;
+  --color-accent-hover: #d1651f;
+  --color-accent-light: #fdf0e6;
+  --color-bg: #ffffff;
+  --color-surface: #f8f8fa;
+  --color-border: #e5e7eb;
+  --color-text: #1a1a2e;
+  --color-text-muted: #6b7280;
+  --color-dark-footer: #1a1a2e;
 }
 
 * {
@@ -34,75 +34,44 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-fraunces);
 }
 
-/* Glass effect utility */
-.glass {
-  background: rgba(19, 19, 21, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border);
-}
-
-/* Gradient text */
-.gradient-text {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Gradient button */
+/* Botón primario naranja */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+  background-color: var(--color-accent);
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 0.75rem;
   font-weight: 600;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+  background-color: var(--color-accent-hover);
   transform: translateY(-1px);
 }
 
+/* Botón outline */
 .btn-outline {
   border: 1px solid var(--color-border);
   color: var(--color-text);
   padding: 0.75rem 2rem;
   border-radius: 0.75rem;
   font-weight: 600;
-  transition: background 0.2s, border-color 0.2s;
+  transition: border-color 0.2s, background-color 0.2s;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-outline:hover {
-  background: var(--color-surface);
   border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
 }
 
-/* Section spacing */
 section {
   padding: 5rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Bento grid helper */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.bento-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 1rem;
-  padding: 2rem;
-  transition: border-color 0.2s;
-}
-
-.bento-card:hover {
-  border-color: var(--color-accent);
 }
 
 /* Hide honeypot */
@@ -114,4 +83,9 @@ section {
   height: 0;
   width: 0;
   z-index: -1;
+}
+
+/* Utilidad: fondo gris claro para secciones */
+.bg-surface-section {
+  background-color: var(--color-surface);
 }

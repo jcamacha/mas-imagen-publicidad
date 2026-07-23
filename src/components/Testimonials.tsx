@@ -58,18 +58,18 @@ export default function Testimonials() {
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 10.017-10.426V6.75c-3.84 0-5.486 2.051-5.748 5.638h5.748V21H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 10.017-10.426V6.75C6.177 6.75 4.542 8.801 4.28 12.388H10.02V21H0z" />
             </svg>
 
-            <blockquote className="text-xl md:text-2xl font-medium font-fraunces text-white leading-relaxed mb-6 max-w-3xl">
+            <blockquote className="text-xl md:text-2xl font-medium font-fraunces text-text leading-relaxed mb-6 max-w-3xl">
               &ldquo;{TESTIMONIALS[index].quote}&rdquo;
             </blockquote>
-
+ 
             <div className="mb-4">
               <span className="inline-block px-4 py-1.5 rounded-full text-xs font-mono font-bold tracking-wide uppercase text-accent bg-accent/10 border border-accent/20">
                 Métrica: {TESTIMONIALS[index].metric}
               </span>
             </div>
-
+ 
             <cite className="not-italic">
-              <span className="block text-base font-bold text-white font-manrope">
+              <span className="block text-base font-bold text-text font-manrope">
                 {TESTIMONIALS[index].name}
               </span>
               <span className="block text-sm text-text-muted font-manrope">

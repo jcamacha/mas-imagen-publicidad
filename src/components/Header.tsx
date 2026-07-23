@@ -1,43 +1,43 @@
 "use client";
-
+ 
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+ 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const pathname = usePathname();
-
+ 
   const toggleMenu = () => setIsOpen(!isOpen);
-
+ 
   const isActive = (path: string) => pathname === path;
-
+ 
   return (
-    <header className="sticky top-0 z-50 w-full glass border-b border-border/85">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-xl md:text-2xl font-bold tracking-wider font-fraunces text-white hover:text-accent transition-colors"
+              className="text-xl md:text-2xl font-bold tracking-wider font-fraunces text-text hover:text-accent transition-colors"
             >
               MÁS IMAGEN <span className="text-accent">PUBLICIDAD</span>
             </Link>
           </div>
-
+ 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
               className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
-                isActive("/") ? "text-accent" : "text-text-muted"
+                isActive("/") ? "text-accent" : "text-text-muted hover:text-text"
               }`}
             >
               Inicio
             </Link>
-
+ 
             {/* Dropdown hover */}
             <div
               className="relative"
@@ -46,7 +46,7 @@ export default function Header() {
             >
               <button
                 className={`text-sm font-semibold transition-colors hover:text-accent font-manrope flex items-center gap-1 cursor-pointer py-2 ${
-                  pathname.startsWith("/servicios") ? "text-accent" : "text-text-muted"
+                  pathname.startsWith("/servicios") ? "text-accent" : "text-text-muted hover:text-text"
                 }`}
               >
                 Servicios
@@ -66,19 +66,19 @@ export default function Header() {
                   />
                 </svg>
               </button>
-
+ 
               {isDropdownOpen && (
-                <div className="absolute left-0 mt-0 w-48 rounded-xl shadow-lg bg-surface border border-border py-2 z-50">
+                <div className="absolute left-0 mt-0 w-48 rounded-xl shadow-lg bg-white border border-border py-2 z-50">
                   <Link
                     href="/servicios#digital"
-                    className="block px-4 py-2.5 text-sm text-text-muted hover:text-white hover:bg-accent/10 transition-colors font-manrope"
+                    className="block px-4 py-2.5 text-sm text-text-muted hover:text-text hover:bg-surface transition-colors font-manrope"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     Presencia Digital
                   </Link>
                   <Link
                     href="/servicios#fisico"
-                    className="block px-4 py-2.5 text-sm text-text-muted hover:text-white hover:bg-accent/10 transition-colors font-manrope"
+                    className="block px-4 py-2.5 text-sm text-text-muted hover:text-text hover:bg-surface transition-colors font-manrope"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     Presencia Física (Taller)
@@ -86,7 +86,7 @@ export default function Header() {
                   <hr className="border-border my-1" />
                   <Link
                     href="/servicios"
-                    className="block px-4 py-2.5 text-sm font-bold text-accent hover:text-white hover:bg-accent/10 transition-colors font-manrope"
+                    className="block px-4 py-2.5 text-sm font-bold text-accent hover:text-accent-hover hover:bg-surface transition-colors font-manrope"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     Ver Todos
@@ -94,35 +94,35 @@ export default function Header() {
                 </div>
               )}
             </div>
-
+ 
             <Link
               href="/nosotros"
               className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
-                isActive("/nosotros") ? "text-accent" : "text-text-muted"
+                isActive("/nosotros") ? "text-accent" : "text-text-muted hover:text-text"
               }`}
             >
               Nosotros
             </Link>
-
+ 
             <Link
               href="/portafolio"
               className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
-                isActive("/portafolio") ? "text-accent" : "text-text-muted"
+                isActive("/portafolio") ? "text-accent" : "text-text-muted hover:text-text"
               }`}
             >
               Portafolio
             </Link>
-
+ 
             <Link
               href="/contacto"
               className={`text-sm font-semibold transition-colors hover:text-accent font-manrope ${
-                isActive("/contacto") ? "text-accent" : "text-text-muted"
+                isActive("/contacto") ? "text-accent" : "text-text-muted hover:text-text"
               }`}
             >
               Contacto
             </Link>
           </nav>
-
+ 
           {/* CTA */}
           <div className="hidden md:block">
             <Link
@@ -132,13 +132,13 @@ export default function Header() {
               Cotizar
             </Link>
           </div>
-
+ 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-white hover:bg-surface focus:outline-none transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-text-muted hover:text-text hover:bg-surface focus:outline-none transition-colors"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -176,11 +176,11 @@ export default function Header() {
           </div>
         </div>
       </div>
-
+ 
       {/* Mobile Menu */}
       {isOpen && (
         <div
-          className="md:hidden bg-surface border-b border-border py-4 px-4 space-y-3"
+          className="md:hidden bg-white border-b border-border py-4 px-4 space-y-3"
           id="mobile-menu"
         >
           <Link
@@ -188,7 +188,7 @@ export default function Header() {
             className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
               isActive("/")
                 ? "bg-accent/10 text-accent"
-                : "text-text-muted hover:text-white"
+                : "text-text-muted hover:text-text hover:bg-surface"
             }`}
             onClick={() => setIsOpen(false)}
           >
@@ -201,14 +201,14 @@ export default function Header() {
             <div className="pl-3 space-y-2 border-l border-border">
               <Link
                 href="/servicios#digital"
-                className="block py-1 text-sm text-text-muted hover:text-white font-manrope"
+                className="block py-1 text-sm text-text-muted hover:text-text font-manrope"
                 onClick={() => setIsOpen(false)}
               >
                 Presencia Digital
               </Link>
               <Link
                 href="/servicios#fisico"
-                className="block py-1 text-sm text-text-muted hover:text-white font-manrope"
+                className="block py-1 text-sm text-text-muted hover:text-text font-manrope"
                 onClick={() => setIsOpen(false)}
               >
                 Presencia Física
@@ -220,7 +220,7 @@ export default function Header() {
             className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
               isActive("/nosotros")
                 ? "bg-accent/10 text-accent"
-                : "text-text-muted hover:text-white"
+                : "text-text-muted hover:text-text hover:bg-surface"
             }`}
             onClick={() => setIsOpen(false)}
           >
@@ -231,7 +231,7 @@ export default function Header() {
             className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
               isActive("/portafolio")
                 ? "bg-accent/10 text-accent"
-                : "text-text-muted hover:text-white"
+                : "text-text-muted hover:text-text hover:bg-surface"
             }`}
             onClick={() => setIsOpen(false)}
           >
@@ -242,7 +242,7 @@ export default function Header() {
             className={`block px-3 py-2 rounded-md text-base font-semibold font-manrope ${
               isActive("/contacto")
                 ? "bg-accent/10 text-accent"
-                : "text-text-muted hover:text-white"
+                : "text-text-muted hover:text-text hover:bg-surface"
             }`}
             onClick={() => setIsOpen(false)}
           >

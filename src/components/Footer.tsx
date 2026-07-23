@@ -1,8 +1,8 @@
 import Link from "next/link";
-
+ 
 export default function Footer() {
   return (
-    <footer className="bg-surface border-t border-border mt-20">
+    <footer className="bg-[#1a1a2e] text-white border-t border-gray-800 mt-20">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Columna Marca & Newsletter */}
@@ -13,7 +13,7 @@ export default function Footer() {
             >
               MÁS IMAGEN <span className="text-accent">PUBLICIDAD</span>
             </Link>
-            <p className="text-sm text-text-muted max-w-sm font-manrope">
+            <p className="text-sm text-gray-400 max-w-sm font-manrope">
               Del pixel a la prenda. La única agencia en el Estado de México que
               integra marketing digital estratégico con taller de serigrafía y
               producción física propia.
@@ -27,15 +27,15 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Tu correo electrónico"
-                  className="bg-bg border border-border rounded-l-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-accent w-full font-manrope"
+                  className="bg-[#24243a] border border-gray-700 rounded-l-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-accent w-full font-manrope"
                 />
-                <button className="bg-gradient-to-r from-accent to-accent-light text-white px-4 py-2 rounded-r-xl text-sm font-semibold hover:opacity-90 transition-opacity font-manrope cursor-pointer">
+                <button className="bg-accent text-white px-4 py-2 rounded-r-xl text-sm font-semibold hover:bg-accent-hover transition-colors font-manrope cursor-pointer">
                   Unirse
                 </button>
               </div>
             </div>
           </div>
-
+ 
           {/* Columna Servicios */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
@@ -45,7 +45,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios#digital"
-                  className="text-sm text-text-muted hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
                 >
                   Presencia Digital
                 </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios#fisico"
-                  className="text-sm text-text-muted hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
                 >
                   Presencia Física
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios"
-                  className="text-sm text-text-muted hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
                 >
                   Taller de Serigrafía
                 </Link>
@@ -69,14 +69,14 @@ export default function Footer() {
               <li>
                 <Link
                   href="/servicios"
-                  className="text-sm text-text-muted hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
                 >
                   Planes Integrados
                 </Link>
               </li>
             </ul>
           </div>
-
+ 
           {/* Columna Empresa & Contacto */}
           <div>
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/nosotros"
-                  className="text-sm text-text-muted hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
                 >
                   Nosotros
                 </Link>
@@ -94,7 +94,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/portafolio"
-                  className="text-sm text-text-muted hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
                 >
                   Portafolio
                 </Link>
@@ -102,13 +102,13 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contacto"
-                  className="text-sm text-text-muted hover:text-white transition-colors font-manrope"
+                  className="text-sm text-gray-400 hover:text-white transition-colors font-manrope"
                 >
                   Contacto
                 </Link>
               </li>
             </ul>
-
+ 
             <h3 className="text-sm font-semibold text-white uppercase tracking-wider font-mono mb-4">
               Redes Sociales
             </h3>
@@ -116,7 +116,7 @@ export default function Footer() {
               {/* Facebook */}
               <a
                 href="#"
-                className="text-text-muted hover:text-accent transition-colors"
+                className="text-gray-400 hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -126,7 +126,7 @@ export default function Footer() {
               {/* Instagram */}
               <a
                 href="#"
-                className="text-text-muted hover:text-accent transition-colors"
+                className="text-gray-400 hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -138,7 +138,7 @@ export default function Footer() {
                 href="https://wa.me/525577196924"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted hover:text-accent transition-colors"
+                className="text-gray-400 hover:text-accent transition-colors"
                 aria-label="WhatsApp"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -148,17 +148,17 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
+ 
         {/* Barra inferior de copyright */}
-        <div className="border-t border-border/60 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-text-muted font-manrope">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-gray-500 font-manrope">
             &copy; 2026 Más Imagen Publicidad. Parte del grupo Más Imagen.
           </p>
-          <div className="flex gap-6 text-xs text-text-muted">
-            <span className="font-mono text-accent-light">
+          <div className="flex gap-6 text-xs text-gray-500">
+            <span className="font-mono text-accent">
               12 años de trayectoria
             </span>
-            <span className="font-mono text-beige">
+            <span className="font-mono text-gray-400">
               Taller de Serigrafía Propio
             </span>
           </div>

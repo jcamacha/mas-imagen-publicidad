@@ -100,7 +100,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 bg-surface border border-border p-8 rounded-2xl text-left"
+      className="space-y-6 bg-white border border-border p-8 rounded-2xl text-left"
     >
       {/* Honeypot field */}
       <div className="hidden-field">
@@ -115,12 +115,12 @@ export default function ContactForm() {
           autoComplete="off"
         />
       </div>
-
+ 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label
             htmlFor="nombre"
-            className="block text-sm font-semibold mb-2 text-white font-manrope"
+            className="block text-sm font-semibold mb-2 text-text font-manrope"
           >
             Nombre Completo *
           </label>
@@ -131,7 +131,7 @@ export default function ContactForm() {
             value={formData.nombre}
             onChange={handleChange}
             placeholder="Juan Pérez"
-            className={`w-full bg-bg border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.nombre ? "border-red-500" : "border-border"
             }`}
           />
@@ -139,11 +139,11 @@ export default function ContactForm() {
             <p className="text-red-500 text-xs mt-1 font-mono">{errors.nombre}</p>
           )}
         </div>
-
+ 
         <div>
           <label
             htmlFor="empresa"
-            className="block text-sm font-semibold mb-2 text-white font-manrope"
+            className="block text-sm font-semibold mb-2 text-text font-manrope"
           >
             Nombre de tu Negocio / Empresa *
           </label>
@@ -154,7 +154,7 @@ export default function ContactForm() {
             value={formData.empresa}
             onChange={handleChange}
             placeholder="Mi Negocio S.A."
-            className={`w-full bg-bg border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.empresa ? "border-red-500" : "border-border"
             }`}
           />
@@ -163,12 +163,12 @@ export default function ContactForm() {
           )}
         </div>
       </div>
-
+ 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-semibold mb-2 text-white font-manrope"
+            className="block text-sm font-semibold mb-2 text-text font-manrope"
           >
             Correo Electrónico *
           </label>
@@ -179,7 +179,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="correo@ejemplo.com"
-            className={`w-full bg-bg border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.email ? "border-red-500" : "border-border"
             }`}
           />
@@ -187,11 +187,11 @@ export default function ContactForm() {
             <p className="text-red-500 text-xs mt-1 font-mono">{errors.email}</p>
           )}
         </div>
-
+ 
         <div>
           <label
             htmlFor="telefono"
-            className="block text-sm font-semibold mb-2 text-white font-manrope"
+            className="block text-sm font-semibold mb-2 text-text font-manrope"
           >
             Teléfono (10 dígitos) *
           </label>
@@ -202,7 +202,7 @@ export default function ContactForm() {
             value={formData.telefono}
             onChange={handleChange}
             placeholder="5512345678"
-            className={`w-full bg-bg border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.telefono ? "border-red-500" : "border-border"
             }`}
           />
@@ -213,11 +213,11 @@ export default function ContactForm() {
           )}
         </div>
       </div>
-
+ 
       <div>
         <label
           htmlFor="tipo"
-          className="block text-sm font-semibold mb-2 text-white font-manrope"
+          className="block text-sm font-semibold mb-2 text-text font-manrope"
         >
           ¿Qué tipo de servicios requieres? *
         </label>
@@ -226,7 +226,7 @@ export default function ContactForm() {
           name="tipo"
           value={formData.tipo}
           onChange={handleChange}
-          className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors [&>option]:bg-surface"
+          className="w-full bg-white border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors [&>option]:bg-white [&>option]:text-text"
         >
           <option value="digital">
             Presencia Digital (SEO, Web, Ads, Redes)
@@ -237,11 +237,11 @@ export default function ContactForm() {
           <option value="ambos">Ambos Mundos (La especialidad de la casa)</option>
         </select>
       </div>
-
+ 
       <div>
         <label
           htmlFor="mensaje"
-          className="block text-sm font-semibold mb-2 text-white font-manrope"
+          className="block text-sm font-semibold mb-2 text-text font-manrope"
         >
           Cuéntanos sobre tu proyecto *
         </label>
@@ -252,7 +252,7 @@ export default function ContactForm() {
           onChange={handleChange}
           rows={5}
           placeholder="Hola, me interesa posicionar mi negocio con una web y además hacer 50 uniformes tipo polo para mi taller..."
-          className={`w-full bg-bg border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accent transition-colors ${
+          className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
             errors.mensaje ? "border-red-500" : "border-border"
           }`}
         />
@@ -260,7 +260,7 @@ export default function ContactForm() {
           <p className="text-red-500 text-xs mt-1 font-mono">{errors.mensaje}</p>
         )}
       </div>
-
+ 
       <button
         type="submit"
         disabled={status === "loading"}
@@ -268,9 +268,9 @@ export default function ContactForm() {
       >
         {status === "loading" ? "Enviando..." : "Enviar Cotización"}
       </button>
-
+ 
       {status === "success" && (
-        <p className="text-emerald-500 font-semibold text-center text-sm font-mono mt-4">
+        <p className="text-emerald-600 font-semibold text-center text-sm font-mono mt-4">
           ¡Formulario enviado con éxito! Te contactaremos pronto.
         </p>
       )}

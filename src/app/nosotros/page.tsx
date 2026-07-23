@@ -1,30 +1,30 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedTitle from "@/components/AnimatedTitle";
-
+ 
 export default function Nosotros() {
   return (
-    <div className="min-h-screen bg-bg flex flex-col justify-between">
+    <div className="min-h-screen bg-white flex flex-col justify-between">
       <Header />
-
+ 
       <main className="flex-grow py-20 px-6 max-w-4xl mx-auto w-full">
         {/* H1 Animado */}
-        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 font-fraunces text-center">
-          Sobre <span className="gradient-text">Nosotros</span>
+        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#374151] mb-6 font-fraunces text-center">
+          Sobre <span className="text-accent">Nosotros</span>
         </AnimatedTitle>
-
-        <p className="text-text-muted text-center font-manrope text-lg mb-16 max-w-2xl mx-auto">
+ 
+        <p className="text-text font-manrope text-lg text-center mb-16 max-w-2xl mx-auto">
           Conoce la historia, misión y el equipo detrás de Más Imagen Publicidad,
           la agencia que conecta el píxel con la prenda.
         </p>
-
+ 
         {/* Sección Historia */}
         <div className="space-y-12">
-          <div className="bg-surface border border-border p-8 rounded-2xl">
-            <h2 className="text-2xl font-bold text-white font-fraunces mb-4">
+          <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
+            <h2 className="text-2xl font-bold text-[#374151] font-fraunces mb-4">
               Nuestra Historia
             </h2>
-            <div className="space-y-4 text-text-muted font-manrope text-sm leading-relaxed">
+            <div className="space-y-4 text-text font-manrope text-sm leading-relaxed">
               <p>
                 Todo comenzó en el Estado de México hace 12 años bajo el nombre
                 de <strong>&ldquo;Más Imagen / Serigrafics&rdquo;</strong>, un
@@ -54,49 +54,49 @@ export default function Nosotros() {
               </p>
             </div>
           </div>
-
+ 
           {/* Misión y Valores */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-surface border border-border p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold text-white font-fraunces mb-4">
+            <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
+              <h2 className="text-2xl font-bold text-[#374151] font-fraunces mb-4">
                 Misión
               </h2>
-              <p className="text-text-muted font-manrope text-sm leading-relaxed">
+              <p className="text-text font-manrope text-sm leading-relaxed">
                 Empoderar a las PyMEs mexicanas integrando su identidad física y
                 presencia digital en una sola estrategia coherente, facilitando
                 la gestión de proveedores con transparencia, velocidad y
                 excelencia técnica.
               </p>
             </div>
-
-            <div className="bg-surface border border-border p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold text-white font-fraunces mb-4">
+ 
+            <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
+              <h2 className="text-2xl font-bold text-[#374151] font-fraunces mb-4">
                 Valores
               </h2>
-              <ul className="text-text-muted font-manrope text-sm leading-relaxed space-y-2">
+              <ul className="text-text font-manrope text-sm leading-relaxed space-y-3">
                 <li>
-                  <strong className="text-accent-light">Sinceridad:</strong>{" "}
+                  <strong className="text-accent">Sinceridad:</strong>{" "}
                   Entregamos reportes basados en conversiones reales, no en
                   &ldquo;métricas de vanidad&rdquo;.
                 </li>
                 <li>
-                  <strong className="text-accent-light">
+                  <strong className="text-accent">
                     Calidad de Taller:
                   </strong>{" "}
                   Cada costura y cada línea de código pasa por nuestra
                   inspección manual.
                 </li>
                 <li>
-                  <strong className="text-accent-light">Cercanía:</strong> Somos
+                  <strong className="text-accent">Cercanía:</strong> Somos
                   del EdoMex y entendemos los retos de los negocios de la
                   región.
                 </li>
               </ul>
             </div>
           </div>
-
+ 
           {/* Foto Placeholder Equipo */}
-          <div className="bg-surface border border-border rounded-2xl p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
+          <div className="bg-[#f8f8fa] border border-border rounded-2xl p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
             <div className="w-16 h-16 rounded-full bg-accent/10 text-accent flex items-center justify-center mb-4">
               <svg
                 className="w-8 h-8"
@@ -112,20 +112,20 @@ export default function Nosotros() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-white font-fraunces mb-2">
+            <h3 className="text-xl font-bold text-[#374151] font-fraunces mb-2">
               Nuestro Equipo
             </h3>
             <p className="text-text-muted font-manrope text-xs max-w-md mb-6">
               Programadores, diseñadores gráficos, estrategas SEO y maestros
               serigrafistas trabajando bajo un mismo techo.
             </p>
-            <div className="w-full bg-bg border border-border border-dashed rounded-xl py-12 text-sm text-text-muted font-mono uppercase tracking-wider">
+            <div className="w-full bg-white border border-border border-dashed rounded-xl py-12 text-sm text-text-muted font-mono uppercase tracking-wider">
               Foto del equipo (Más Imagen Publicidad &amp; Serigrafics)
             </div>
           </div>
         </div>
       </main>
-
+ 
       <Footer />
     </div>
   );
