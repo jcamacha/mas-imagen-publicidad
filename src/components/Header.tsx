@@ -13,7 +13,7 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
  
   return (
-    <header className="sticky top-0 z-50 w-full bg-bg isolate-blend">
+    <header className="sticky top-0 z-50 w-full bg-bg/80 backdrop-blur-md isolate-blend">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -72,16 +72,6 @@ export default function Header() {
               Contacto
             </Link>
           </nav>
- 
-          {/* CTA */}
-          <div className="hidden md:block">
-            <Link
-              href="/contacto"
-              className="btn-primary text-xs !py-2.5 !px-5 rounded-lg font-bold block"
-            >
-              Cotizar
-            </Link>
-          </div>
  
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -177,15 +167,6 @@ export default function Header() {
           >
             Contacto
           </Link>
-          <div className="pt-2 px-3">
-            <Link
-              href="/contacto"
-              className="btn-primary block text-center py-2.5 font-bold rounded-lg"
-              onClick={() => setIsOpen(false)}
-            >
-              Cotizar
-            </Link>
-          </div>
         </div>
       )}
     </header>

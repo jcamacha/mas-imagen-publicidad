@@ -54,14 +54,9 @@ export default function RootLayout({
       <body
         className={`${fraunces.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        {/* Layer 0: Organic animated blobs */}
         <OrganicTrail />
-
-        {/* Layer 1: Grain texture */}
         <div className="grain-overlay" />
-
-        {/* Layer 2: Content */}
-        <div className="relative z-[2]">{children}</div>
+        {children}
       </body>
     </html>
   );
