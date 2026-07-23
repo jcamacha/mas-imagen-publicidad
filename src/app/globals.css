@@ -31,6 +31,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-fraunces);
+}
+
 /* Azul/violeta en headers — mix-blend-mode: difference */
 h1, h2, h3 {
   mix-blend-mode: difference;
@@ -43,17 +47,12 @@ h1, h2, h3 {
   color: #ffffff;
 }
 
-/* Excepciones: elementos que NO deben tener difference */
-button, .btn-primary, .btn-outline, input, textarea, select,
-nav a, nav span,
-.bg-dark-section, .bg-dark-section *,
-footer, footer * {
+/* Excepciones: NO blend en footer, botones, dark sections */
+footer, footer *,
+.btn-primary, .btn-outline,
+button, input, textarea, select,
+.bg-dark-section, .bg-dark-section * {
   mix-blend-mode: normal;
-}
-
-h1, h2, h3, h4, h5 {
-  font-family: var(--font-fraunces);
-  color: var(--color-text);
 }
 
 /* Botón primario — fondo oscuro sobre amarillo */

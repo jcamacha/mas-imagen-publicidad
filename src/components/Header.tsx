@@ -43,7 +43,7 @@ export default function Header() {
               href="/"
               className="text-xl md:text-2xl font-fraunces hover:opacity-85 transition-opacity"
             >
-              <span className="font-extrabold text-text tracking-wide logo-blend">MÁS IMAGEN PUBLICIDAD</span>
+              <span className="font-extrabold tracking-wide logo-blend">MÁS IMAGEN PUBLICIDAD</span>
             </Link>
           </div>
  
