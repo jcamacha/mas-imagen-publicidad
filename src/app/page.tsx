@@ -2,14 +2,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SimpleContactForm from "@/components/SimpleContactForm";
 import HeroSlideshow from "@/components/HeroSlideshow";
-import WaveTextPixi from "@/components/WaveTextPixi";
+import OrganicTrail from "@/components/OrganicTrail";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col justify-between selection:bg-accent-light selection:text-accent">
       <Header />
-
+ 
       <main className="flex-grow">
         {/* SECTION 1: HERO */}
         <section className="py-20 md:py-28 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -19,12 +19,12 @@ export default function Home() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               Taller propio · 12 años · EdoMex
             </div>
-
-            <WaveTextPixi>
+ 
+            <OrganicTrail>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces">
                 Tu negocio, en digital y en físico. En un solo lugar.
               </h1>
-            </WaveTextPixi>
+            </OrganicTrail>
  
             <p className="text-lg md:text-xl text-text-muted leading-relaxed font-manrope max-w-xl">
               Somos la única agencia en EdoMex con taller de serigrafía propio. Hacemos tu web, tus anuncios y tus playeras. Sin complicaciones, desde hace 12 años.
