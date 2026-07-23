@@ -23,8 +23,7 @@ export default function Header() {
               href="/"
               className="text-xl md:text-2xl font-fraunces hover:text-accent transition-colors"
             >
-              <span className="font-extrabold text-text">MÁS IMAGEN</span>{" "}
-              <span className="text-accent font-medium">PUBLICIDAD</span>
+              <span className="font-extrabold text-text">MÁS IMAGEN PUBLICIDAD</span>
             </Link>
           </div>
 
