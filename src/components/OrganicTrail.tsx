@@ -31,9 +31,9 @@ export default function OrganicTrail() {
 
     // Waves: full-page coverage, fast, dark
     const waves = [
-      { amp: h * 0.40, freq: 0.0004, speed: 0.28, phase: 0,   yOff: h * 0.20, opacity: 0.85 },
-      { amp: h * 0.35, freq: 0.0006, speed: 0.34, phase: 2,   yOff: h * 0.50, opacity: 0.75 },
-      { amp: h * 0.38, freq: 0.0005, speed: -0.30, phase: 4,   yOff: h * 0.80, opacity: 0.65 },
+      { amp: h * 0.40, freq: 0.0004, speed: 0.28, phase: 0,   yOff: h * 0.15, opacity: 0.95 },
+      { amp: h * 0.35, freq: 0.0006, speed: 0.34, phase: 2,   yOff: h * 0.45, opacity: 0.90 },
+      { amp: h * 0.38, freq: 0.0005, speed: -0.30, phase: 4,   yOff: h * 0.75, opacity: 0.85 },
     ];
 
     function draw() {

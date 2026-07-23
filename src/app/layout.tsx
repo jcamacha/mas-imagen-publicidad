@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope, JetBrains_Mono } from "next/font/google";
 import OrganicTrail from "@/components/OrganicTrail";
-import WaveContrast from "@/components/WaveContrast";
+import BackdropFilter from "@/components/BackdropFilter";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -56,8 +56,10 @@ export default function RootLayout({
         className={`${fraunces.variable} ${manrope.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <OrganicTrail />
-        <WaveContrast />
-        {children}
+        <BackdropFilter />
+        <div className="relative z-[2]">
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -110,3 +110,29 @@ section {
 .bg-dark-section p {
   color: #c4c0a0;
 }
+
+/* Texto con contraste dinámico sobre el backdrop filtrado */
+h1, h2, h3, h4, h5, h6, p, span, li, label {
+  mix-blend-mode: difference;
+  color: #ffffff !important;
+}
+
+/* Excepciones: elementos que NO deben tener blend */
+nav, nav *, header, header *,
+button, .btn-primary, .btn-outline,
+input, textarea, select,
+footer, footer *,
+.bg-dark-section, .bg-dark-section *,
+canvas, iframe, img, svg,
+a {
+  mix-blend-mode: normal !important;
+}
+
+/* Restaurar color del texto en footer oscuro */
+footer h2, footer h3, footer p, footer a, footer span,
+footer li, footer label,
+.bg-dark-section h2, .bg-dark-section h3,
+.bg-dark-section p, .bg-dark-section a {
+  mix-blend-mode: normal !important;
+  color: #ffffff !important;
+}
