@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-bg flex flex-col justify-between selection:bg-accent-light selection:text-accent">
+    <div className="min-h-screen flex flex-col justify-between selection:bg-accent-light selection:text-accent">
       <Header />
  
       <main className="flex-grow">
@@ -44,7 +44,7 @@ export default function Home() {
         </section>
 
         {/* SECTION 2: LO QUE HACEMOS */}
-        <section className="py-20 md:py-24 px-6 bg-bg">
+        <section className="py-20 md:py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
@@ -253,7 +253,7 @@ export default function Home() {
         </section>
  
         {/* SECTION 4: CÓMO TRABAJAMOS */}
-        <section className="py-20 md:py-24 px-6 bg-bg border-t border-border">
+        <section className="py-20 md:py-24 px-6 border-t border-border">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">

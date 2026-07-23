@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Servicios() {
   return (
-    <div className="min-h-screen bg-bg flex flex-col justify-between">
+    <div className="min-h-screen flex flex-col justify-between">
       <Header />
 
       <main className="flex-grow py-20 px-6 max-w-6xl mx-auto w-full">

@@ -16,17 +16,18 @@ interface Blob {
 }
 
 function createBlob(w: number, h: number): Blob {
+  const minDim = Math.min(w, h);
   return {
     x: Math.random() * w,
     y: Math.random() * h,
-    radius: 120 + Math.random() * 200,
+    radius: minDim * 0.25 + Math.random() * minDim * 0.35,
     phaseX: Math.random() * Math.PI * 2,
     phaseY: Math.random() * Math.PI * 2,
     speedX: 0.0003 + Math.random() * 0.0007,
     speedY: 0.0003 + Math.random() * 0.0007,
     ampX: 0.3 + Math.random() * 0.4,
     ampY: 0.3 + Math.random() * 0.4,
-    opacity: 0.25 + Math.random() * 0.25,
+    opacity: 0.35 + Math.random() * 0.30,
   };
 }
 
@@ -59,14 +60,14 @@ export default function OrganicTrail() {
       const gradient = ctx.createRadialGradient(
         cx,
         cy,
-        blob.radius * 0.3,
+        0,
         cx,
         cy,
         blob.radius
       );
-      gradient.addColorStop(0, `rgba(30, 30, 30, ${blob.opacity * 1.3})`);
-      gradient.addColorStop(0.5, `rgba(30, 30, 30, ${blob.opacity})`);
-      gradient.addColorStop(1, "rgba(30, 30, 30, 0)");
+      gradient.addColorStop(0, `rgba(20, 20, 20, ${blob.opacity})`);
+      gradient.addColorStop(0.6, `rgba(20, 20, 20, ${blob.opacity * 0.6})`);
+      gradient.addColorStop(1, "rgba(20, 20, 20, 0)");
 
       ctx.beginPath();
       ctx.arc(cx, cy, blob.radius, 0, Math.PI * 2);
