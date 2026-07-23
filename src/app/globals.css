@@ -85,17 +85,41 @@ section {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.80' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Mix-blend hero text — dynamic contrast over trail */
+/* Mix-blend on ALL text — dynamic contrast over trail */
+h1, h2, h3, h4, h5, h6, p, span, a, li, label {
+  mix-blend-mode: difference;
+  color: #ffffff;
+}
+
+/* Exceptions: elements that should NOT blend */
+button, .btn-primary, .btn-outline, input, textarea, select,
+nav a, .navbar-links a, .isolate-blend, .isolate-blend *,
+.bg-dark-section, .bg-dark-section *,
+.grain-overlay, canvas, iframe, img {
+  mix-blend-mode: normal;
+  color: inherit;
+}
+
+/* Restore dark section text to white */
+.bg-dark-section h2,
+.bg-dark-section h3,
+.bg-dark-section p,
+.bg-dark-section a {
+  mix-blend-mode: normal;
+  color: #ffffff;
+}
+
+/* Keep buttons solid */
+.btn-primary, .btn-outline {
+  mix-blend-mode: normal;
+}
+
+/* Hero blend — kept for specificity but now redundant */
 .hero-blend {
   mix-blend-mode: difference;
   color: #ffffff;
   position: relative;
   z-index: 10;
-}
-
-/* Container must allow blending */
-.hero-blend-container {
-  isolation: auto !important;
 }
 
 /* Isolation — prevents blend mode leakage */
