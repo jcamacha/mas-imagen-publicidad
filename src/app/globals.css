@@ -85,49 +85,28 @@ section {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.80' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Mix-blend on HEADINGS only — white on wave, readable on yellow */
-h1, h2, h3 {
-  mix-blend-mode: difference;
+/* ALL text uses exclusion blend — black on yellow, white on wave */
+h1, h2, h3, h4, h5, h6, p, span, li, label, a {
+  mix-blend-mode: exclusion;
   color: #ffffff;
 }
 
-/* Body text stays normal */
-p, span, li, label {
-  mix-blend-mode: normal;
-  color: inherit;
-}
-
-/* Links on yellow keep their color */
-a {
+/* Exceptions — never blend */
+.isolate-blend, .isolate-blend *,
+.bg-dark-section, .bg-dark-section *,
+.btn-primary, .btn-outline, button,
+input, textarea, select,
+canvas, iframe, img {
   mix-blend-mode: normal;
 }
 
-/* But H1/H2/H3 inside dark sections must stay white */
-.bg-dark-section h1,
+/* Dark sections keep white text */
 .bg-dark-section h2,
 .bg-dark-section h3,
 .bg-dark-section p,
-.bg-dark-section a,
-.bg-dark-section span,
-.bg-dark-section li,
-.bg-dark-section label {
+.bg-dark-section a {
   mix-blend-mode: normal;
   color: #ffffff;
-}
-
-/* Buttons never blend */
-.btn-primary, .btn-outline, button {
-  mix-blend-mode: normal;
-}
-
-/* Navbar stays isolated */
-.isolate-blend, .isolate-blend * {
-  mix-blend-mode: normal;
-}
-
-/* Keep grain and canvas out */
-canvas, .grain-overlay, iframe, img {
-  mix-blend-mode: normal;
 }
 
 /* Hero blend — kept for specificity but now redundant */
