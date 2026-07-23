@@ -63,7 +63,7 @@ export default function Portafolio() {
 
       <main className="flex-grow py-20 px-6 max-w-6xl mx-auto w-full">
         {/* H1 Animado */}
-        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center">
+        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center text-text">
           Lo que podemos hacer por tu <span className="text-accent">negocio</span>
         </AnimatedTitle>
 

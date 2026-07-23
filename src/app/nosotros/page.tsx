@@ -4,12 +4,12 @@ import AnimatedTitle from "@/components/AnimatedTitle";
  
 export default function Nosotros() {
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-between">
+    <div className="min-h-screen bg-bg flex flex-col justify-between">
       <Header />
  
       <main className="flex-grow py-20 px-6 max-w-4xl mx-auto w-full">
         {/* H1 Animado */}
-        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center">
+        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center text-text">
           Sobre <span className="text-accent">Nosotros</span>
         </AnimatedTitle>
  
@@ -19,8 +19,8 @@ export default function Nosotros() {
  
         {/* Sección Historia */}
         <div className="space-y-12">
-          <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
-            <h2 className="text-2xl font-bold font-fraunces mb-4">
+          <div className="bg-white border border-border p-8 rounded-2xl">
+            <h2 className="text-2xl font-bold font-fraunces mb-4 text-text">
               Nuestra Historia
             </h2>
             <div className="space-y-4 text-text font-manrope text-sm leading-relaxed">
@@ -38,8 +38,8 @@ export default function Nosotros() {
  
           {/* Misión y Valores */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold font-fraunces mb-4">
+            <div className="bg-white border border-border p-8 rounded-2xl">
+              <h2 className="text-2xl font-bold font-fraunces mb-4 text-text">
                 Misión
               </h2>
               <p className="text-text font-manrope text-sm leading-relaxed">
@@ -47,8 +47,8 @@ export default function Nosotros() {
               </p>
             </div>
  
-            <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl">
-              <h2 className="text-2xl font-bold font-fraunces mb-4">
+            <div className="bg-white border border-border p-8 rounded-2xl">
+              <h2 className="text-2xl font-bold font-fraunces mb-4 text-text">
                 Valores
               </h2>
               <ul className="text-text font-manrope text-sm leading-relaxed space-y-3">
@@ -70,7 +70,7 @@ export default function Nosotros() {
           </div>
  
           {/* Foto Placeholder Equipo */}
-          <div className="bg-[#f8f8fa] border border-border rounded-2xl p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
+          <div className="bg-white border border-border rounded-2xl p-12 text-center flex flex-col items-center justify-center min-h-[300px]">
             <div className="w-16 h-16 rounded-full bg-accent-light text-accent flex items-center justify-center mb-4">
               <svg
                 className="w-8 h-8"
@@ -86,14 +86,14 @@ export default function Nosotros() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold font-fraunces mb-2">
+            <h3 className="text-xl font-bold font-fraunces mb-2 text-text">
               Nuestro Equipo
             </h3>
             <p className="text-text-muted font-manrope text-xs max-w-md mb-6">
               Programadores, diseñadores gráficos, estrategas SEO y maestros
               serigrafistas trabajando bajo un mismo techo.
             </p>
-            <div className="w-full bg-white border border-border border-dashed rounded-xl py-12 text-sm text-text-muted font-mono uppercase tracking-wider">
+            <div className="w-full bg-bg border border-border border-dashed rounded-xl py-12 text-sm text-text-muted font-mono uppercase tracking-wider">
               Foto del equipo (Más Imagen Publicidad &amp; Serigrafics)
             </div>
           </div>

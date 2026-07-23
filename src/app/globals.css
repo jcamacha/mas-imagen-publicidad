@@ -3,15 +3,15 @@
 @theme inline {
   --font-fraunces: "Fraunces", serif;
   --font-manrope: "Manrope", sans-serif;
-  --color-accent: #1e3a5f;
-  --color-accent-hover: #152e4a;
-  --color-accent-light: #e8edf3;
-  --color-bg: #ffffff;
-  --color-surface: #f8f8fa;
-  --color-border: #e5e7eb;
-  --color-text: #1a1a2e;
-  --color-text-muted: #5f6b7a;
-  --color-dark-footer: #1a1a2e;
+  --color-accent: #2a2a2a;
+  --color-accent-hover: #1a1a1a;
+  --color-accent-light: #fff9c2;
+  --color-bg: #fff570;
+  --color-surface: #ffffff;
+  --color-border: #e8db5e;
+  --color-text: #2a2a2a;
+  --color-text-muted: #5c571f;
+  --color-dark-section: #2a2a2a;
 }
 
 * {
@@ -35,12 +35,12 @@ h1, h2, h3, h4, h5 {
   color: var(--color-text);
 }
 
-/* Botón primario azul oscuro */
+/* Botón primario — fondo oscuro sobre amarillo */
 .btn-primary {
   background-color: var(--color-accent);
   color: white;
   padding: 0.75rem 2rem;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   font-weight: 600;
   transition: background-color 0.2s, transform 0.2s;
   display: inline-block;
@@ -52,12 +52,12 @@ h1, h2, h3, h4, h5 {
   transform: translateY(-1px);
 }
 
-/* Botón outline */
+/* Botón outline — borde oscuro sobre amarillo */
 .btn-outline {
-  border: 1.5px solid var(--color-accent);
+  border: 2px solid var(--color-accent);
   color: var(--color-accent);
   padding: 0.75rem 2rem;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   font-weight: 600;
   transition: background-color 0.2s;
   display: inline-block;
@@ -65,7 +65,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-outline:hover {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-accent);
+  color: white;
 }
 
 section {
@@ -84,6 +85,17 @@ section {
   z-index: -1;
 }
 
-.bg-surface-section {
-  background-color: var(--color-surface);
+/* Sección oscura de contraste */
+.bg-dark-section {
+  background-color: var(--color-dark-section);
+  color: white;
+}
+
+.bg-dark-section h2,
+.bg-dark-section h3 {
+  color: white;
+}
+
+.bg-dark-section p {
+  color: #c4c0a0;
 }

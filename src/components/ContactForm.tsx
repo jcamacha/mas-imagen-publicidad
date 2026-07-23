@@ -115,7 +115,7 @@ export default function ContactForm() {
           autoComplete="off"
         />
       </div>
- 
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label
@@ -131,7 +131,7 @@ export default function ContactForm() {
             value={formData.nombre}
             onChange={handleChange}
             placeholder="Juan Pérez"
-            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-bg border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.nombre ? "border-red-500" : "border-border"
             }`}
           />
@@ -154,7 +154,7 @@ export default function ContactForm() {
             value={formData.empresa}
             onChange={handleChange}
             placeholder="Mi Negocio S.A."
-            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-bg border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.empresa ? "border-red-500" : "border-border"
             }`}
           />
@@ -179,7 +179,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             placeholder="correo@ejemplo.com"
-            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-bg border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.email ? "border-red-500" : "border-border"
             }`}
           />
@@ -202,7 +202,7 @@ export default function ContactForm() {
             value={formData.telefono}
             onChange={handleChange}
             placeholder="5512345678"
-            className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
+            className={`w-full bg-bg border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
               errors.telefono ? "border-red-500" : "border-border"
             }`}
           />
@@ -226,7 +226,7 @@ export default function ContactForm() {
           name="tipo"
           value={formData.tipo}
           onChange={handleChange}
-          className="w-full bg-white border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors [&>option]:bg-white [&>option]:text-text"
+          className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors [&>option]:bg-white [&>option]:text-text"
         >
           <option value="digital">
             Presencia Digital (SEO, Web, Ads, Redes)
@@ -252,7 +252,7 @@ export default function ContactForm() {
           onChange={handleChange}
           rows={5}
           placeholder="Hola, me interesa posicionar mi negocio con una web y además hacer 50 uniformes tipo polo para mi taller..."
-          className={`w-full bg-white border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
+          className={`w-full bg-bg border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors ${
             errors.mensaje ? "border-red-500" : "border-border"
           }`}
         />

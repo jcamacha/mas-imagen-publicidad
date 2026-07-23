@@ -10,10 +10,10 @@ export default function Contacto() {
 
       <main className="flex-grow py-20 px-6 max-w-6xl mx-auto w-full">
         {/* H1 Animado */}
-        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center">
+        <AnimatedTitle className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 font-fraunces text-center text-text">
           Ponte en <span className="text-accent">Contacto</span>
         </AnimatedTitle>
-
+ 
         <p className="text-text-muted text-center font-manrope text-lg mb-16 max-w-2xl mx-auto">
           ¿Tienes dudas o estás listo para arrancar tu proyecto? Escríbenos.
           Para conocer nuestro taller de producción, visita{" "}
@@ -26,18 +26,18 @@ export default function Contacto() {
             serigrafics.com
           </a>.
         </p>
-
+ 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Información de Contacto */}
           <div className="lg:col-span-5 space-y-8">
             <div className="bg-surface border border-border p-8 rounded-2xl space-y-6">
-              <h2 className="text-2xl font-bold font-fraunces">
+              <h2 className="text-2xl font-bold font-fraunces text-text">
                 Datos de Contacto
               </h2>
-
+ 
               {/* Teléfono */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent-light text-accent flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-light text-text flex items-center justify-center shrink-0">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -58,16 +58,16 @@ export default function Contacto() {
                   </h4>
                   <a
                     href="tel:+525577196924"
-                    className="text-text hover:text-accent font-semibold transition-colors font-manrope"
+                    className="text-text hover:opacity-80 font-semibold transition-opacity font-manrope"
                   >
                     +52 55 7719 6924
                   </a>
                 </div>
               </div>
-
+ 
               {/* Correo */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent-light text-accent flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-light text-text flex items-center justify-center shrink-0">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -88,37 +88,7 @@ export default function Contacto() {
                   </h4>
                   <a
                     href="mailto:contacto@masimagenpublicidad.mx"
-                    className="text-text hover:text-accent font-semibold transition-colors font-manrope"
-                  >
-                    contacto@masimagenpublicidad.mx
-                  </a>
-                </div>
-              </div>
-
-              {/* Correo */}
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-lg bg-accent-light text-accent flex items-center justify-center shrink-0">
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-text-muted font-mono mb-1">
-                    Email
-                  </h4>
-                  <a
-                    href="mailto:contacto@masimagenpublicidad.mx"
-                    className="text-text hover:text-accent font-semibold transition-colors font-manrope"
+                    className="text-text hover:opacity-80 font-semibold transition-opacity font-manrope"
                   >
                     contacto@masimagenpublicidad.mx
                   </a>

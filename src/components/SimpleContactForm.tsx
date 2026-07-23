@@ -58,9 +58,20 @@ export default function SimpleContactForm() {
           value={formData.nombre}
           onChange={handleChange}
           placeholder="Juan Pérez"
-          className="w-full bg-white border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors font-manrope"
+          className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors font-manrope"
         />
       </div>
+ 
+      {"nombre" in formData && (
+        <div className="hidden-field" aria-hidden="true">
+          <input
+            type="text"
+            name="nombre_completo_honey"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+      )}
 
       <div>
         <label htmlFor="simple-telefono" className="block text-sm font-semibold text-text mb-1 font-manrope">
@@ -74,10 +85,10 @@ export default function SimpleContactForm() {
           value={formData.telefono}
           onChange={handleChange}
           placeholder="5512345678"
-          className="w-full bg-white border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors font-manrope"
+          className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors font-manrope"
         />
       </div>
-
+ 
       <div>
         <label htmlFor="simple-mensaje" className="block text-sm font-semibold text-text mb-1 font-manrope">
           Mensaje breve
@@ -90,10 +101,10 @@ export default function SimpleContactForm() {
           onChange={handleChange}
           placeholder="Platícanos sobre tu proyecto..."
           rows={3}
-          className="w-full bg-white border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors font-manrope"
+          className="w-full bg-bg border border-border rounded-xl px-4 py-3 text-text focus:outline-none focus:border-accent transition-colors font-manrope"
         />
       </div>
-
+ 
       <button
         type="submit"
         disabled={status === "loading"}

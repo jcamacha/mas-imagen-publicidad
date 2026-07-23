@@ -6,40 +6,40 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-between selection:bg-accent-light selection:text-accent">
+    <div className="min-h-screen bg-bg flex flex-col justify-between selection:bg-accent-light selection:text-accent">
       <Header />
-
+ 
       <main className="flex-grow">
         {/* SECTION 1: HERO */}
         <section className="py-20 md:py-28 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="flex-1 space-y-6 text-left">
             {/* Small Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-light border border-accent/20 text-accent text-xs font-semibold tracking-wider font-manrope">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-border text-text text-xs font-semibold tracking-wider font-manrope">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               Taller propio · 12 años · EdoMex
             </div>
-
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces">
+ 
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight font-fraunces text-text">
               Tu negocio, en digital y en físico.{" "}
               <span className="text-accent block sm:inline">En un solo lugar.</span>
             </h1>
-
-            <p className="text-lg md:text-xl text-text leading-relaxed font-manrope max-w-xl">
+ 
+            <p className="text-lg md:text-xl text-text-muted leading-relaxed font-manrope max-w-xl">
               Somos la única agencia en EdoMex con taller de serigrafía propio. Hacemos tu web, tus anuncios y tus playeras. Sin complicaciones, desde hace 12 años.
             </p>
-
+ 
             <div className="pt-4">
               <Link
                 href="#contacto-final"
-                className="btn-primary text-center py-4 px-8 text-base font-semibold font-manrope cursor-pointer inline-block shadow-sm"
+                className="btn-primary text-center py-4 px-8 text-base font-semibold font-manrope cursor-pointer inline-block"
               >
                 Cuéntanos tu proyecto
               </Link>
             </div>
           </div>
-
+ 
           <div className="flex-1 w-full flex justify-center items-center">
-            <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden border border-border shadow-md bg-[#f8f8fa]">
+            <div className="relative w-full max-w-lg aspect-[4/3] rounded-2xl overflow-hidden border border-border bg-white">
               <Image
                 src="/hero-mockup.svg"
                 alt="Mockup de celular con sitio web y playera impresa"
@@ -52,22 +52,22 @@ export default function Home() {
         </section>
 
         {/* SECTION 2: LO QUE HACEMOS */}
-        <section className="py-20 md:py-24 px-6 bg-white border-t border-border">
+        <section className="py-20 md:py-24 px-6 bg-bg">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
                 Lo que hacemos por tu negocio
               </h2>
               <p className="text-text-muted font-manrope text-base max-w-xl mx-auto">
                 Soluciones integrales de marketing y producción física directa, controladas por nosotros de inicio a fin.
               </p>
             </div>
-
+ 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Tarjeta 1: Tu página web */}
-              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col justify-between">
+              <div className="bg-white border border-border p-8 rounded-2xl shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -82,7 +82,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                     Tu página web
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
@@ -98,11 +98,11 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-
+ 
               {/* Tarjeta 2: Tus anuncios */}
-              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col justify-between">
+              <div className="bg-white border border-border p-8 rounded-2xl shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -117,7 +117,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                     Tus anuncios
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
@@ -133,11 +133,11 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-
+ 
               {/* Tarjeta 3: Tus playeras y más */}
-              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col justify-between">
+              <div className="bg-white border border-border p-8 rounded-2xl shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+                  <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -152,7 +152,7 @@ export default function Home() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold font-fraunces mb-3">
+                  <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                     Tus playeras y más
                   </h3>
                   <p className="text-text-muted text-sm leading-relaxed mb-6 font-manrope">
@@ -171,20 +171,20 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+ 
         {/* SECTION 3: ¿POR QUÉ NOSOTROS? */}
         <section className="py-20 md:py-24 px-6 bg-white border-t border-border">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
                 Mucho más que una agencia de marketing
               </h2>
             </div>
-
+ 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Columna 1 */}
-              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col">
-                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+              <div className="bg-bg border border-border p-8 rounded-2xl flex flex-col">
+                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -199,17 +199,17 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-fraunces mb-3">
+                <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                   Taller propio
                 </h3>
                 <p className="text-text-muted text-sm leading-relaxed font-manrope">
                   Desde hace 12 años producimos playeras, uniformes, tazas y displays en nuestro taller de serigrafía. No subcontratamos: controlamos calidad, tiempos y precio.
                 </p>
               </div>
-
+ 
               {/* Columna 2 */}
-              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col">
-                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+              <div className="bg-bg border border-border p-8 rounded-2xl flex flex-col">
+                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -224,17 +224,17 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-fraunces mb-3">
+                <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                   Digital + físico
                 </h3>
                 <p className="text-text-muted text-sm leading-relaxed font-manrope">
                   Nadie más te ofrece la página web, los anuncios Y las playeras en un solo lugar. Una factura, un equipo, cero dolores de cabeza.
                 </p>
               </div>
-
+ 
               {/* Columna 3 */}
-              <div className="bg-[#f8f8fa] border border-border p-8 rounded-2xl flex flex-col">
-                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-accent">
+              <div className="bg-bg border border-border p-8 rounded-2xl flex flex-col">
+                <div className="w-10 h-10 mb-6 flex items-center justify-center rounded-xl bg-accent-light text-text">
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -249,7 +249,7 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold font-fraunces mb-3">
+                <h3 className="text-xl font-bold font-fraunces mb-3 text-text">
                   Resultados que se miden
                 </h3>
                 <p className="text-text-muted text-sm leading-relaxed font-manrope">
@@ -259,87 +259,87 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+ 
         {/* SECTION 4: CÓMO TRABAJAMOS */}
-        <section className="py-20 md:py-24 px-6 bg-white border-t border-border">
+        <section className="py-20 md:py-24 px-6 bg-bg border-t border-border">
           <div className="max-w-7xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-text">
                 Así de fácil es trabajar con nosotros
               </h2>
               <p className="text-text-muted font-manrope text-base max-w-xl mx-auto">
                 Sin intermediarios ni problemas de comunicación. Nos encargamos de todo el proceso.
               </p>
             </div>
-
+ 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
               {/* Paso 1 */}
               <div className="text-center space-y-4">
-                <div className="text-6xl font-bold font-fraunces text-accent tracking-tight">
+                <div className="text-6xl font-bold font-fraunces text-text tracking-tight">
                   1
                 </div>
-                <h3 className="text-xl font-bold font-fraunces">
+                <h3 className="text-xl font-bold font-fraunces text-text">
                   Platicamos
                 </h3>
-                <p className="text-text text-sm leading-relaxed font-manrope max-w-xs mx-auto">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope max-w-xs mx-auto">
                   Entendemos tu negocio, tu mercado y tus objetivos para diseñar una estrategia integral a tu medida.
                 </p>
               </div>
-
+ 
               {/* Paso 2 */}
               <div className="text-center space-y-4">
-                <div className="text-6xl font-bold font-fraunces text-accent tracking-tight">
+                <div className="text-6xl font-bold font-fraunces text-text tracking-tight">
                   2
                 </div>
-                <h3 className="text-xl font-bold font-fraunces">
+                <h3 className="text-xl font-bold font-fraunces text-text">
                   Creamos
                 </h3>
-                <p className="text-text text-sm leading-relaxed font-manrope max-w-xs mx-auto">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope max-w-xs mx-auto">
                   Desarrollamos tu sitio web, programamos tus campañas y producimos las prendas físicas en nuestro taller.
                 </p>
               </div>
-
+ 
               {/* Paso 3 */}
               <div className="text-center space-y-4">
-                <div className="text-6xl font-bold font-fraunces text-accent tracking-tight">
+                <div className="text-6xl font-bold font-fraunces text-text tracking-tight">
                   3
                 </div>
-                <h3 className="text-xl font-bold font-fraunces">
+                <h3 className="text-xl font-bold font-fraunces text-text">
                   Creces
                 </h3>
-                <p className="text-text text-sm leading-relaxed font-manrope max-w-xs mx-auto">
+                <p className="text-text-muted text-sm leading-relaxed font-manrope max-w-xs mx-auto">
                   Lanzamos las campañas, medimos los resultados de visitas y cotizaciones, y realizamos los ajustes necesarios.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
+ 
         {/* SECTION 5: CTA FINAL */}
-        <section id="contacto-final" className="py-20 px-6 bg-[#f8f8fa] border-t border-border">
+        <section id="contacto-final" className="py-20 px-6 bg-dark-section">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces">
+              <h2 className="text-3xl sm:text-4xl font-bold font-fraunces text-white">
                 ¿Empezamos?
               </h2>
-              <p className="text-text text-base font-manrope">
+              <p className="text-white text-base font-manrope opacity-90">
                 Te contactamos hoy mismo. Sin compromiso.
               </p>
             </div>
-
+ 
             <div className="bg-white border border-border p-8 rounded-2xl shadow-sm text-left">
               <SimpleContactForm />
             </div>
-
+ 
             <div className="space-y-2 pt-4">
-              <p className="text-text-muted text-sm font-manrope">
+              <p className="text-gray-400 text-sm font-manrope">
                 ¿Prefieres hablar directamente?
               </p>
               <a
                 href="https://wa.me/525577196924"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-accent hover:text-accent-hover font-semibold font-manrope transition-colors"
+                className="inline-flex items-center gap-2 text-[#fff9c2] hover:text-white font-semibold font-manrope transition-colors"
               >
                 <svg className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.167 1.478 4.775 1.479 5.378 0 9.755-4.375 9.757-9.759.002-2.607-1.002-5.06-2.83-6.89C16.426 2.155 13.97 1.15 11.365 1.15c-5.385 0-9.764 4.378-9.766 9.761-.001 2.02.528 3.992 1.536 5.735l-.991 3.62 3.714-.974c1.716 1.104 3.238 1.636 4.708 1.636zm12.385-6.758c-.328-.164-1.94-.957-2.24-1.067-.3-.11-.518-.164-.736.164-.219.328-.847 1.067-1.038 1.286-.192.219-.383.246-.71.082-.328-.164-1.386-.51-2.64-1.627-.976-.87-1.634-1.947-1.826-2.274-.192-.328-.02-.505.144-.668.148-.146.328-.383.493-.574.164-.192.219-.328.328-.547.11-.219.055-.41-.027-.574-.082-.164-.736-1.776-1.01-2.433-.267-.641-.561-.553-.769-.564-.2-.01-.429-.012-.657-.012-.228 0-.6.086-.913.43-.313.344-1.196 1.171-1.196 2.858 0 1.687 1.229 3.313 1.4 3.543.17.229 2.417 3.691 5.856 5.17 1.012.436 1.802.697 2.423.894.887.282 1.696.242 2.335.146.711-.107 1.94-.793 2.213-1.52.274-.727.274-1.352.192-1.488-.082-.136-.3-.219-.628-.383z" />
@@ -350,7 +350,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-
+ 
       <Footer />
     </div>
   );

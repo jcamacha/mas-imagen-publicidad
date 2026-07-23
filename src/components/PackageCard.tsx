@@ -19,7 +19,7 @@ export default function PackageCard({
     <div
       className={`relative flex flex-col justify-between rounded-2xl p-8 bg-surface border transition-all duration-300 ${
         featured
-          ? "border-accent ring-2 ring-accent/25 shadow-md lg:scale-105 z-10"
+          ? "border-2 border-accent lg:scale-105 z-10"
           : "border-border hover:border-accent"
       }`}
     >

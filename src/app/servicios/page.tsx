@@ -329,7 +329,7 @@ export default function Servicios() {
                   <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent font-mono text-center">
                     Arranque
                   </th>
-                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent font-mono text-center bg-accent/5">
+                  <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent font-mono text-center bg-bg/50">
                     Negocio en Serio
                   </th>
                   <th className="py-4 px-6 text-sm font-semibold uppercase tracking-wider text-accent font-mono text-center">
@@ -345,7 +345,7 @@ export default function Servicios() {
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     Landing Page (1 sección)
                   </td>
-                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-bg/50 font-semibold">
                     Sitio Web Corporativo (5 secciones)
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -359,7 +359,7 @@ export default function Servicios() {
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     Meta Ads Básica
                   </td>
-                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-bg/50 font-semibold">
                     Meta Ads + Google Ads Integrados
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -373,7 +373,7 @@ export default function Servicios() {
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope font-mono">
                     No incluido
                   </td>
-                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-bg/50 font-semibold">
                     2 Redes (Facebook/IG)
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -387,7 +387,7 @@ export default function Servicios() {
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     20 Playeras básicas
                   </td>
-                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-bg/50 font-semibold">
                     50 Playeras en Serigrafía
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -401,7 +401,7 @@ export default function Servicios() {
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope font-mono">
                     No incluido
                   </td>
-                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-bg/50 font-semibold">
                     15 Polos Bordadas
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
@@ -415,7 +415,7 @@ export default function Servicios() {
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
                     10 Tazas + 1 Lona
                   </td>
-                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-accent/5 font-semibold">
+                  <td className="py-4 px-6 text-sm text-text text-center font-manrope bg-bg/50 font-semibold">
                     30 Tazas + 2 Displays Araña
                   </td>
                   <td className="py-4 px-6 text-sm text-text-muted text-center font-manrope">
