@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // ── Capa 0: Caracteres no latinos ──
 const NON_LATIN =
   /[\u0400-\u04FF\u4E00-\u9FFF\u3040-\u309F\u30A0-\u30FF\u0600-\u06FF\u0E00-\u0E7F\uAC00-\uD7AF]/u;
@@ -95,6 +93,7 @@ function isSpam(mensaje: string, nombre: string): string | null {
 
 export async function POST(request: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await request.json();
     const { nombre, empresa, email, telefono, tipo, mensaje, website } = body;
 
