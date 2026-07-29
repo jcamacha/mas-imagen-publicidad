@@ -126,7 +126,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "Más Imagen <onboarding@resend.dev>",
-      to: "crtainboy@gmail.com",
+      to: "serigraficsc@gmail.com",
       subject: `Cotización de ${nombre} — ${empresa}`,
       replyTo: email,
       html: `
