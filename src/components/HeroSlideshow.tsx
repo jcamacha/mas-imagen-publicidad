@@ -6,8 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { animate, stagger } from "animejs";
 
 const slides = [
-  { src: "/slide-1.jpg", alt: "Servicios de marketing digital y serigrafía" },
-  { src: "/slide-2.png", alt: "Producción física y presencia de marca" },
+  { src: "/mockup-playera.jpg", alt: "Playera blanca con logo de gato y audífonos impreso en el pecho" },
+  { src: "/mockup-gorra.jpg", alt: "Gorra negra con logo de gato y audífonos bordado en el frente" },
+  { src: "/mockup-taza.jpg", alt: "Taza de cerámica blanca con logo de gato y audífonos impreso en el costado" },
+  { src: "/mockup-termo.jpg", alt: "Termo metálico de acero inoxidable con logo de gato y audífonos grabado" },
+  { src: "/mockup-madera.jpg", alt: "Placa de madera con logo de gato y audífonos grabado con láser" },
+  { src: "/mockup-lona.jpg", alt: "Lona publicitaria exterior con logo de gato y audífonos impreso" },
+  { src: "/mockup-botella.jpg", alt: "Botella de vidrio con logo de gato y audífonos impreso en el cuerpo" },
+  { src: "/mockup-envase.jpg", alt: "Caja de empaque blanca con logo de gato y audífonos impreso" },
 ];
 
 export default function HeroSlideshow() {
